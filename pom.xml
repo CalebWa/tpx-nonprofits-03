@@ -12,10 +12,10 @@
 	<artifactId>TPX-Proj</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>TPX-Proj</name>
-	<description>TPX Project Nonprofits 03</description>
+	<description>TechPointX Project for Nonprofit 03</description>
 
 	<properties>
-		<java.version>11</java.version>
+		<java.version>1.8</java.version>
 	</properties>
 
 	<dependencies>

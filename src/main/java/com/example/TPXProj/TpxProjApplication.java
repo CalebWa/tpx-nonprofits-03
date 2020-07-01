@@ -16,19 +16,19 @@ public class TpxProjApplication {
 @RestController
 class HelloController {
 
-    @GetMapping("/")
-    String hello() {
-        return "<!DOCTYPE html>\n" +
-                "<html>\n" +
-                    "<head>\n" +
-                        "<title>tpx-nonprofits-03</title>\n" +
-                    "</head>\n" +
-                    "<body>\n" +
-                        "\n" +
-                        "<h1>tpx-nonprofits-03</h1>\n" +
-                        "<p>Hello World!</p>\n" +
-                        "\n" +
-                    "</body>\n" +
-                "</html>";
-    }
+	@GetMapping("/")
+	String hello() {
+		return "<!DOCTYPE html>\n" +
+				"<html>\n" +
+				"<head>\n" +
+				"<title>tpx-nonprofits-03</title>\n" +
+				"</head>\n" +
+				"<body>\n" +
+				"\n" +
+				"<h1>tpx-nonprofits-03</h1>\n" +
+				"<p>Hello World!</p>\n" +
+				"\n" +
+				"</body>\n" +
+				"</html>";
+	}
 }
