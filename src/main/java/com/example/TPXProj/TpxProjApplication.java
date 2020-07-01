@@ -23,7 +23,7 @@ class HelloController {
 		return "<!DOCTYPE html>\n" +
 				"<html>\n" +
 				"<head>\n" +
-				"<title>tpx-test-003</title>\n" +
+				"<title>tpx-nonprofits-03</title>\n" +
 				"</head>\n" +
 				"<body>\n" +
 				"\n" +
