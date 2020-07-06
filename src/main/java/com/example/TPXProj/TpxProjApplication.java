@@ -25,7 +25,7 @@ class HelloController {
 				"</head>\n" +
 				"<body>\n" +
 				"\n" +
-				"<h1>tpx-nonprofits-03</h1>\n" +
+				"<h1>Nonprofits 03</h1>\n" +
 				"<p>Hello World!</p>\n" +
 				"\n" +
 				"</body>\n" +
