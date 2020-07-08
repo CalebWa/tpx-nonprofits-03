@@ -1,5 +1,15 @@
 package com.example.TPXProj;
+//Yeah I just want a hashmap for these
+//Enums are for when it never changes while these might change
+//I also need to easily switch between string and int which hashmap does
+//Enums don't do what I need done
+//Hashmap does
 
+//I also need the ability to have many numbers of one field
+//Have an array for each field?
+//Score analyzer would iterate over array to see if any match
+
+//Also need a string for nonprofit
 public enum Activity {
     ADMINISTRATION(0),
     ADVOCACY(1),
