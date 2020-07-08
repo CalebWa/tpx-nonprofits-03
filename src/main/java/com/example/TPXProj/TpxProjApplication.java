@@ -5,6 +5,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+
 @SpringBootApplication
 @RestController
 public class TpxProjApplication {
@@ -17,7 +21,21 @@ public class TpxProjApplication {
 class HelloController {
 
 	@GetMapping("/")
-	String hello() {
+	String indexPage() {
+	    try {
+            File indexPageFile = new File("index.html");
+            Scanner scanner = new Scanner(indexPageFile);
+            StringBuilder indexPage = new StringBuilder();
+
+            while (scanner.hasNextLine()) {
+                indexPage.append(scanner.nextLine());
+            }
+
+            return indexPage.toString();
+        } catch (FileNotFoundException e) {
+            System.out.println("File could not be found");
+        }
+
 		return "<html>\n" +
 				"<head>\n" +
 				"\t<title> Nonprofit Homepage</title>\n" +
