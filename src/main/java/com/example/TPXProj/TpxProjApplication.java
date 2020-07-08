@@ -23,7 +23,7 @@ class HelloController {
 	@GetMapping("/")
 	String indexPage() {
 	    try {
-            File indexPageFile = new File("src\\main\\java\\com\\example\\TPXProj\\index.html");
+            File indexPageFile = new File("src/main/java/com/example/TPXProj/index.html");
             Scanner scanner = new Scanner(indexPageFile);
             StringBuilder indexPage = new StringBuilder();
 
@@ -35,7 +35,7 @@ class HelloController {
         } catch (FileNotFoundException e) {
             System.out.println("File could not be found");
         }
-        return "<!DOCTYPE html>\"\n" +
+        return "<!DOCTYPE html>\n" +
                 "<html>\n" +
                 "    <head>\n" +
                 "        <title> Nonprofit Homepage</title>\n" +
