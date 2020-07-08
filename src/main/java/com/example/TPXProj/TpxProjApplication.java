@@ -35,6 +35,15 @@ class HelloController {
         } catch (FileNotFoundException e) {
             System.out.println("File could not be found");
         }
-        return "";
+        return "<!DOCTYPE html>\"\n" +
+                "<html>\n" +
+                "    <head>\n" +
+                "        <title> Nonprofit Homepage</title>\n" +
+                "    </head>\n" +
+                "    <body>\n" +
+                "        <h1>Techpoint Nonprofits 03!</h1>\n" +
+                "    </body>\n" +
+                "</html>";
+
 	}
 }
