@@ -1,0 +1,18 @@
+package com.example.TPXProj;
+
+public enum Activity {
+    ADMINISTRATION,
+    ADVOCACY,
+    ARTS,
+    CIVIC_ENGAGEMENT,
+    CHILDREN_AND_YOUTH,
+    EDUCATION,
+    ELDERLY_AND_DISABLED,
+    ENVIRONMENTAL,
+    FOOD,
+    FUNDRAISING,
+    HEALTH,
+    HOMELESS,
+    HUMAN_SERVICE,
+    RESEARCH
+}
