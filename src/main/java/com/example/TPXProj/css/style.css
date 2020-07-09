@@ -1,0 +1,161 @@
+.orange {
+    background-color: #EB973F;
+}
+
+.navigation { 
+    display: flex;
+    height: 1.5em;
+    padding: 2em 0em 1em 0em;
+    line-height: 25px;
+    background-color: #EB973F;
+}
+
+.header {
+    background-color: #EB973F;
+    text-align: right;
+    margin-top: 6em;
+}
+
+.image-overlay {
+    width: 360px; 
+    height: 300px;
+    padding-bottom: 5em;
+    float: right;
+    margin: 0em;
+    position: absolute;
+    top: 10%;
+    transform: translateY(-10%);
+    transform: translateX(-100%);
+}
+
+
+body {
+    margin-top: 0px;
+    margin-bottom: 30px;
+    font-family: 'Roboto', sans-serif;
+    background-color: white; 
+}
+
+h1 {
+    font-size: 1.35em; 
+    font-family: 'Muli', sans-serif;
+    color: white;
+}
+
+h2 {
+    font-size: 1.7em;
+    font-weight: 350;
+    color: white; 
+    padding-bottom: 0.2em;
+    text-align: left;
+}
+
+h3 {
+    font-size: 1.35em;
+    text-align: left;
+    color: #545c6e;
+    line-height: 1em;
+    height: 1em; 
+    padding: 3em 0em 0em 0em;
+}
+
+h4 {
+    font-size: 1.4em;
+    padding-bottom: 12em;
+    padding-top: 0.5em;
+    color: #e8e8e8;
+    text-align: left;
+    max-width: 25em;
+    line-height: 1.5em;
+}
+
+h5 {
+    font-size: 1.2em;
+    text-align: right; 
+    font-style: italic;
+}
+
+p {
+    font-size: 0.925em;
+    font-weight: 300;
+    text-align: left;
+    color: #757575;
+}
+
+.imgtext {
+    line-height: 2em;
+    margin-left: 0em;
+    margin-right: 0em;
+    max-width: 20em;
+    padding: 0em 0em 3.5em 0em;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    color: white;
+    text-decoration: none;
+}
+
+button {
+    border-radius: 10px;
+    text-transform: none;
+    border-style: none;
+}
+
+button:hover {
+    background-color: #6B451D;
+    color: white;
+}
+
+.icon {
+    width: 220px; 
+    height: 220px;
+    padding-bottom: 5em;
+}
+
+.clickme1 {
+    background-color: #B87732;
+    color: white;
+    font-weight: 350;
+    margin-left: 20em;
+    font-size: 0.9em;
+}
+
+.clickme2 {
+    background-color: #EB973F;
+    color: white;
+    font-weight: 350;
+    margin-top: 1em;
+    margin-left: 10em;
+    font-size: 1.3em;
+    width: 50%;
+    height: 3em;
+}
+
+.clickme3 {
+    background-color: #B87732;
+    color: white;
+    font-weight: 300;
+    margin-top: 1.5em;
+    margin-bottom: 9em;
+    margin-left: 15em;
+    font-size: 1.1em;
+    width: 40%;
+    height: 3em;
+}
+
+
+
+footer {
+    background-color: #6B451D;
+    color: #d1d1d1;
+    font-size: 0.85em;
+    font-weight: 300;
+    height: 10em;
+    line-height: 1.5em;
+    padding: 4em 0em 0em 1.75em;
+}
