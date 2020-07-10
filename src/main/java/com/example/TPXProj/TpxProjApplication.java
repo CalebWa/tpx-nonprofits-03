@@ -18,7 +18,7 @@ public class TpxProjApplication {
 }
 
 @RestController
-class HelloController {
+class WebAppController {
 
 	@GetMapping("/")
 	String indexPage() {
