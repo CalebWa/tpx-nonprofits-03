@@ -23,7 +23,7 @@ class WebAppController {
 	@GetMapping("/")
 	String indexPage() {
 	    try {
-            File indexPageFile = new File("src/main/java/com/example/TPXProj/Index.html");
+            File indexPageFile = new File("src/main/java/com/example/TPXProj/html/index.html");
             Scanner scanner = new Scanner(indexPageFile);
             StringBuilder indexPage = new StringBuilder();
 
