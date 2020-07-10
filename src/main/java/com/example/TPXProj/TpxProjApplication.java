@@ -16,34 +16,3 @@ public class TpxProjApplication {
 		SpringApplication.run(TpxProjApplication.class, args);
 	}
 }
-
-@RestController
-class WebAppController {
-
-	@GetMapping("/")
-	String indexPage() {
-	    try {
-            File indexPageFile = new File("src/main/java/com/example/TPXProj/html/index.html");
-            Scanner scanner = new Scanner(indexPageFile);
-            StringBuilder indexPage = new StringBuilder();
-
-            while (scanner.hasNextLine()) {
-                indexPage.append(scanner.nextLine());
-            }
-
-            return indexPage.toString();
-        } catch (FileNotFoundException e) {
-            System.out.println("File could not be found");
-        }
-        return "<!DOCTYPE html>\n" +
-                "<html>\n" +
-                "    <head>\n" +
-                "        <title> Nonprofit Homepage</title>\n" +
-                "    </head>\n" +
-                "    <body>\n" +
-                "        <h1>Techpoint Nonprofits 03!</h1>\n" +
-                "    </body>\n" +
-                "</html>";
-
-	}
-}
