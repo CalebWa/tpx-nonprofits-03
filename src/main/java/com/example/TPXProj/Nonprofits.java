@@ -11,10 +11,16 @@ public class Nonprofits {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    private Activity activity;
-    private Skill skill;
-    private Time time;
-    private Location location;
+    private String name;
+    private String website;
+    private String phone;
+    private int needs;
+    private int activities;
+    private int skills;
+    private int times;
+    private int location;
+    private String comment;
+
 
     public int getID() {
         return id;
@@ -24,35 +30,75 @@ public class Nonprofits {
         this.id = id;
     }
 
-    public Activity getActivity() {
-        return activity;
+    public String getName() {
+        return name;
     }
 
-    public void setActivity(Activity activity) {
-        this.activity = activity;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public Skill getSkill() {
-        return skill;
+    public String getWebsite() {
+        return website;
     }
 
-    public void setSkill(Skill skill) {
-        this.skill = skill;
+    public void setWebsite(String website) {
+        this.website = website;
     }
 
-    public Time getTime() {
-        return time;
+    public String getPhone() {
+        return phone;
     }
 
-    public void setTime(Time time) {
-        this.time = time;
+    public void setPhone(String phone) {
+        this.phone = phone;
     }
 
-    public Location getLocation() {
+    public int getNeeds() {
+        return needs;
+    }
+
+    public void setNeeds(int needs) {
+        this.needs = needs;
+    }
+
+    public int getActivities() {
+        return activities;
+    }
+
+    public void setActivities(int activities) {
+        this.activities = activities;
+    }
+
+    public int getSkills() {
+        return skills;
+    }
+
+    public void setSkills(int skills) {
+        this.skills = skills;
+    }
+
+    public int getTimes() {
+        return times;
+    }
+
+    public void setTimes(int times) {
+        this.times = times;
+    }
+
+    public int getLocation() {
         return location;
     }
 
-    public void setLocation(Location location) {
+    public void setLocation(int location) {
         this.location = location;
+    }
+
+    public String getComment() {
+        return comment;
+    }
+
+    public void setComment(String comment) {
+        this.comment = comment;
     }
 }
