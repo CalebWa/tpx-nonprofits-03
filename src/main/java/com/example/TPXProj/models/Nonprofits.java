@@ -1,4 +1,4 @@
-package com.example.TPXProj;
+package com.example.TPXProj.models;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
