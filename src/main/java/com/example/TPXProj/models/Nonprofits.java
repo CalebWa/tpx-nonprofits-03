@@ -15,8 +15,8 @@ public class Nonprofits {
     private String website;
     private String phone;
     private int needs;
-    private int activities;
-    private int skills;
+    private long activities;
+    private long skills;
     private int times;
     private int location;
     private String comment;
@@ -62,7 +62,7 @@ public class Nonprofits {
         this.needs = needs;
     }
 
-    public int getActivities() {
+    public long getActivities() {
         return activities;
     }
 
@@ -70,7 +70,7 @@ public class Nonprofits {
         this.activities = activities;
     }
 
-    public int getSkills() {
+    public long getSkills() {
         return skills;
     }
 

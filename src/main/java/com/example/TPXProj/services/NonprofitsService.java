@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class NonprofitsService {
     @Autowired
     private NonprofitsRepository repository;
+
     @GetMapping("/api/nonprofits")
     public Iterable<Nonprofits> findAllNonProfits() {
         return repository.findAll();
