@@ -85,15 +85,6 @@ h6 {
     line-height: 1.5em;
 }
 
-h7 {
-    font-size: 0.925em;
-    text-align: left;
-    color: #545c6e;
-    line-height: 1em;
-    height: 1em; 
-    padding: 3em 0em 0em 0em;
-}
-
 p {
     font-size: 0.925em;
     font-weight: 300;
@@ -177,10 +168,10 @@ footer {
     padding: 4em 0em 0em 1.75em;
 }
 
-form {font-size: 1.35em;
+form {
+    font-size: 0.925em;
     text-align: left;
     color: #545c6e;
-    line-height: 1em;
-    height: 1em; 
+    line-height: 1em; 
     padding: 3em 0em 0em 0em;
 }
