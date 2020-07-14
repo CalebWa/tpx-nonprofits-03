@@ -80,9 +80,18 @@ h6 {
     padding-bottom: 3em;
     padding-top: 0.5em;
     color: #e8e8e8;
-    text-align: center;
+    text-align: left;
     max-width: 25em;
     line-height: 1.5em;
+}
+
+h7 {
+    font-size: 1em;
+    text-align: left;
+    color: #545c6e;
+    line-height: 1em;
+    height: 1em; 
+    padding: 3em 0em 0em 0em;
 }
 
 p {
