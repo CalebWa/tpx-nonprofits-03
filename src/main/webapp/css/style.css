@@ -115,14 +115,12 @@ button:hover {
     width: 220px; 
     height: 220px;
     padding-bottom: 5em;
-    padding-right: 2em;
 }
 
 .dataviz {
-    width: 320px; 
+    width: 220px; 
     height: 220px;
     padding-bottom: 5em;
-    padding-left: 2em;
 }
 
 .clickme1 {
