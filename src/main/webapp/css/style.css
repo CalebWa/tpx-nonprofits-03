@@ -69,14 +69,20 @@ h4 {
     line-height: 1.5em;
 }
 
-.smaller {
-    padding-bottom: 5em;
-}
-
 h5 {
     font-size: 1.2em;
     text-align: right; 
     font-style: italic;
+}
+
+h6 {
+    font-size: 1.4em;
+    padding-bottom: 3em;
+    padding-top: 0.5em;
+    color: #e8e8e8;
+    text-align: center;
+    max-width: 25em;
+    line-height: 1.5em;
 }
 
 p {
