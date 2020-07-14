@@ -157,3 +157,11 @@ footer {
     line-height: 1.5em;
     padding: 4em 0em 0em 1.75em;
 }
+
+form {font-size: 1.35em;
+    text-align: left;
+    color: #545c6e;
+    line-height: 1em;
+    height: 1em; 
+    padding: 3em 0em 0em 0em;
+}
