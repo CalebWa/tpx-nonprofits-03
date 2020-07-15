@@ -96,7 +96,7 @@ p {
     margin-left: 0em;
     margin-right: 0em;
     width: 17em;
-    padding: 0em 0em 3.7em 0em;
+    padding: 0em 0em 3.2em 0em;
 }
 
 a {
@@ -137,7 +137,7 @@ button:hover {
     background-color: #B87732;
     color: white;
     font-weight: 350;
-    margin-left: 50em;
+    margin-left: 20em;
     font-size: 0.9em;
 }
 
@@ -146,7 +146,7 @@ button:hover {
     color: white;
     font-weight: 350;
     margin-top: 1em;
-    margin-left: 60em;
+    margin-left: 25em;
     font-size: 1.3em;
     width: 50%;
     height: 3em;
@@ -158,7 +158,7 @@ button:hover {
     font-weight: 300;
     margin-top: 1.5em;
     margin-bottom: 9em;
-    margin-left: 15em;
+    margin-left: 30em;
     font-size: 1.1em;
     width: 40%;
     height: 3em;
