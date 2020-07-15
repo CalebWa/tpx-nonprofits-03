@@ -18,9 +18,15 @@ public class DatabaseService {
         return repository.findAll();
     }
 
-    @PostMapping("/volunteer/response")
-    public String testMethod(@RequestBody String requestBody) {
-        System.out.println(requestBody);
-        return "Hi, this is a test.";
+    @PostMapping("/volunteer-results")
+    public String serviceVolunteer(@RequestBody String formString) {
+        System.out.println(formString);
+        return "This functionality is not yet working.";
+    }
+
+    @PostMapping("/nonprofit-confirmation")
+    public String serviceNonprofit(@RequestBody String formString) {
+        System.out.println(formString);
+        return "This functionality is not yet working.";
     }
 }
