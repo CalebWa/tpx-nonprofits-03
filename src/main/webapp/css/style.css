@@ -55,8 +55,8 @@ h3 {
     color: #545c6e;
     line-height: 1em;
     height: 1em;
-    width: 20em;
-    padding: 0em 0em 0em 0em;
+    width: 10em;
+    padding: 3em 1em 3em 1em;
 }
 
 h4 {
@@ -95,7 +95,7 @@ p {
     line-height: 2em;
     margin-left: 0em;
     margin-right: 0em;
-    width: 30em;
+    width: 15em;
     padding: 0em 0em 3.5em 0em;
 }
 
@@ -121,8 +121,8 @@ button:hover {
 }
 
 .icon {
-    width: 300px; 
-    height: 300px;
+    width: 175px; 
+    height: 175px;
     padding-bottom: 5em;
 }
 
