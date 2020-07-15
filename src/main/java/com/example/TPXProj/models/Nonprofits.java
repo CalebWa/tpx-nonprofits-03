@@ -14,6 +14,7 @@ public class Nonprofits {
     private String name;
     private String website;
     private String phone;
+    private String email;
     private int needs;
     private long activities;
     private long skills;
@@ -52,6 +53,14 @@ public class Nonprofits {
 
     public void setPhone(String phone) {
         this.phone = phone;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public int getNeeds() {
