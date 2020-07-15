@@ -10,7 +10,7 @@ public class Nonprofit {
     private ArrayList<Integer> need;
     private ArrayList<Integer> activities;
     private ArrayList<Integer> skills;
-    private ArrayList<Integer> commitment;
+    private ArrayList<Integer> commitments;
     private Integer location;
     private String comment;
 
@@ -54,12 +54,20 @@ public class Nonprofit {
         this.need = need;
     }
 
+    public void addNeed(Integer need) {
+        this.need.add(need);
+    }
+
     public ArrayList<Integer> getActivities() {
         return activities;
     }
 
     public void setActivities(ArrayList<Integer> activities) {
         this.activities = activities;
+    }
+
+    public void addActivity(Integer activity) {
+        this.activities.add(activity);
     }
 
     public ArrayList<Integer> getSkills() {
@@ -70,12 +78,20 @@ public class Nonprofit {
         this.skills = skills;
     }
 
-    public ArrayList<Integer> getCommitment() {
-        return commitment;
+    public void addSkill(Integer skill) {
+        this.skills.add(skill);
     }
 
-    public void setCommitment(ArrayList<Integer> commitment) {
-        this.commitment = commitment;
+    public ArrayList<Integer> getCommitments() {
+        return commitments;
+    }
+
+    public void setCommitments(ArrayList<Integer> commitments) {
+        this.commitments = commitments;
+    }
+
+    public void addCommitment(Integer commitment) {
+        this.commitments.add(commitment);
     }
 
     public Integer getLocation() {

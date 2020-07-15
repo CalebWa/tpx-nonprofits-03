@@ -26,7 +26,7 @@ public class Volunteer {
     }
 
     public void addActiity(Integer activity) {
-        activities.add(activity);
+        this.activities.add(activity);
     }
 
     public ArrayList<Integer> getSkills() {
@@ -38,7 +38,7 @@ public class Volunteer {
     }
 
     public void addSkill(Integer skill) {
-        skills.add(skill);
+        this.skills.add(skill);
     }
 
     public Integer getAvailability() {
