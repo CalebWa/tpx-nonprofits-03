@@ -55,7 +55,7 @@ h3 {
     color: #545c6e;
     line-height: 1em;
     height: 1em;
-    width: 150px;
+    width: 20em;
     padding: 0em 0em 0em 0em;
 }
 
@@ -88,7 +88,6 @@ h6 {
 p {
     font-size: 0.925em;
     font-weight: 300;
-    width: 150px;
     color: #757575;
 }
 
@@ -96,7 +95,7 @@ p {
     line-height: 2em;
     margin-left: 0em;
     margin-right: 0em;
-    max-width: 20em;
+    width: 30em;
     padding: 0em 0em 3.5em 0em;
 }
 
