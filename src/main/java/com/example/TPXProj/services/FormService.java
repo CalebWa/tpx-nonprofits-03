@@ -18,4 +18,6 @@ public class FormService {
         System.out.println(formString);
         return "This functionality is not yet working.";
     }
+
+    //Add GetMappings for those as well
 }
