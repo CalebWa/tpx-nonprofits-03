@@ -56,7 +56,7 @@ h3 {
     line-height: 1em;
     height: 1em;
     width: 10em;
-    padding: 2em 0em 0.5em 0em;
+    padding: 2em 0em 0.2em 0em;
 }
 
 h4 {
@@ -95,7 +95,7 @@ p {
     line-height: 2em;
     margin-left: 0em;
     margin-right: 0em;
-    width: 15em;
+    width: 17em;
     padding: 0em 0em 3em 0em;
 }
 
@@ -139,7 +139,7 @@ button:hover {
     background-color: #B87732;
     color: white;
     font-weight: 350;
-    margin-left: 20em;
+    margin-left: 25em;
     font-size: 0.9em;
 }
 
@@ -148,7 +148,7 @@ button:hover {
     color: white;
     font-weight: 350;
     margin-top: 1em;
-    margin-left: 10em;
+    margin-left: 15em;
     font-size: 1.3em;
     width: 50%;
     height: 3em;
