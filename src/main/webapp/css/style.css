@@ -126,11 +126,9 @@ button:hover {
     padding-bottom: 5em;
 }
 
-.data {
+.icon2 {
     width: 300px; 
     height: 300px;
-    display: flex;
-    justify-content: flex-end;
     padding-bottom: 5em; 
 }
 
