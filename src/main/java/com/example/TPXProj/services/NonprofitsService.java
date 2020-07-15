@@ -18,7 +18,7 @@ public class NonprofitsService {
         return repository.findAll();
     }
 
-    @PostMapping("/test")
+    @PostMapping("/volunteer/response")
     public String testMethod(@RequestBody String requestBody) {
         System.out.println(requestBody);
         return "Hi, this is a test.";
