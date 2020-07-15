@@ -55,8 +55,9 @@ h3 {
     text-align: left;
     color: #545c6e;
     line-height: 1em;
-    height: 1em; 
-    padding: 3em 0em 0em 0em;
+    height: 1em;
+    width: 300px;
+    padding: 0em 0em 0em 0em;
 }
 
 h4 {
@@ -88,6 +89,7 @@ h6 {
 p {
     font-size: 0.925em;
     font-weight: 300;
+    width: 300px;
     text-align: left;
     color: #757575;
 }
