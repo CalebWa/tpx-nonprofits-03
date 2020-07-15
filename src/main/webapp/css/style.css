@@ -52,11 +52,10 @@ h2 {
 
 h3 {
     font-size: 1.35em;
-    text-align: left;
     color: #545c6e;
     line-height: 1em;
     height: 1em;
-    width: 300px;
+    max-width: 50px;
     padding: 0em 0em 0em 0em;
 }
 
@@ -89,8 +88,7 @@ h6 {
 p {
     font-size: 0.925em;
     font-weight: 300;
-    width: 300px;
-    text-align: left;
+    max-width: 50px;
     color: #757575;
 }
 
