@@ -31,7 +31,7 @@
 
 body {
     margin-top: 0px;
-    margin-bottom: 30px;
+    margin-bottom: 0px;
     font-family: 'Roboto', sans-serif;
     background-color: white; 
 }
@@ -169,7 +169,7 @@ footer {
     color: #d1d1d1;
     font-size: 0.85em;
     font-weight: 300;
-    height: 0em;
+    height: 10em;
     line-height: 1.5em;
     padding: 4em 0em 0em 1.75em;
 }
