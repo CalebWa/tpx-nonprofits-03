@@ -12,7 +12,7 @@ public class VolunteerProcessor {
 
     public VolunteerProcessor(String formString) {
         this.formString = formString;
-        this.volunteer = VolunteerParser.parseString(formString);
+        this.volunteer = new Volunteer(VolunteerParser.parseString(formString));
     }
 
     public String output() {

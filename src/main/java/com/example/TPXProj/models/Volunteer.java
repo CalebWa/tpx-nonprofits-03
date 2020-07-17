@@ -9,6 +9,22 @@ public class Volunteer {
     private Integer availability;
     private Integer location;
 
+    public Volunteer() {
+        this.contribution = null;
+        this.activities = new ArrayList<>();
+        this.skills = new ArrayList<>();
+        this.availability = null;
+        this.location = null;
+    }
+
+    public Volunteer(Volunteer volunteer) {
+        this.contribution = volunteer.contribution;
+        this.activities = volunteer.activities;
+        this.skills = volunteer.skills;
+        this.availability = volunteer.availability;
+        this.location = volunteer.location;
+    }
+
     public Integer getContribution() {
         return contribution;
     }
