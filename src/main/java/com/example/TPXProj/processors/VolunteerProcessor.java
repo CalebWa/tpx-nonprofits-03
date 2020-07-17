@@ -2,8 +2,6 @@ package com.example.TPXProj.processors;
 
 import com.example.TPXProj.models.Volunteer;
 
-import java.util.ArrayList;
-
 public class VolunteerProcessor {
     private Volunteer volunteer;
     private String formString;
@@ -30,13 +28,24 @@ public class VolunteerProcessor {
                 case "availability":
                     volunteer.setAvailability(Integer.parseInt(components[componentValue]));
                     break;
+                case "location":
+                    volunteer.setLocation(Integer.parseInt(components[componentValue]));
+                    break;
+                default:
+                    System.out.println("This shouldn't exist, lol");
+                    break;
             }
         }
     }
 
     public String output() {
+        //Get all nonprofits
+        //Parse all nonprofits
+        //Compare against the one volunteer
+        //Create hashmap/rank data sheet
+        
         System.out.println(this.formString);
         System.out.println(this.volunteer);
-        return "";
+        return "This functionality is not yet working.";
     }
 }
