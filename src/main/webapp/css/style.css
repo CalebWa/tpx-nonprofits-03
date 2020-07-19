@@ -113,6 +113,7 @@ button {
     border-radius: 10px;
     text-transform: none;
     border-style: none;
+    text-align: center;
 }
 
 button:hover {
