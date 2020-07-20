@@ -1,4 +1,4 @@
 package com.example.TPXProj.inserters;
 
-public class HTMLInserter {
+public class VolunteerInserter {
 }
