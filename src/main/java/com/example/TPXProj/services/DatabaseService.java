@@ -32,7 +32,7 @@ public class DatabaseService {
         return output;
     }
 
-    
+
     public Iterable<DatabaseNonprofit> findAllNonprofits() {
         return repository.findAll();
     }
