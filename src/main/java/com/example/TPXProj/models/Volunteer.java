@@ -1,6 +1,7 @@
 package com.example.TPXProj.models;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class Volunteer {
     private Integer contribution;
@@ -41,7 +42,7 @@ public class Volunteer {
         this.activities = activities;
     }
 
-    public void addActiity(Integer activity) {
+    public void addActivity(Integer activity) {
         this.activities.add(activity);
     }
 
@@ -71,5 +72,13 @@ public class Volunteer {
 
     public void setLocation(Integer location) {
         this.location = location;
+    }
+
+    public String printVolunteer() {
+        return  "Contribution: " + this.contribution + "<br>" +
+                "Activities: " + Arrays.toString(activities.toArray()) + "<br>" +
+                "Skills: " + Arrays.toString(skills.toArray()) + "<br>" +
+                "Availability: " + this.availability + "<br>" +
+                "Location: " + this.location;
     }
 }

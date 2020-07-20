@@ -1,13 +1,14 @@
 package com.example.TPXProj.models;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class Nonprofit {
     private String name;
     private String website;
     private String phone;
     private String email;
-    private ArrayList<Integer> need;
+    private ArrayList<Integer> needs;
     private ArrayList<Integer> activities;
     private ArrayList<Integer> skills;
     private ArrayList<Integer> commitments;
@@ -18,7 +19,7 @@ public class Nonprofit {
         this.website = null;
         this.phone = null;
         this.email = null;
-        this.need = new ArrayList<>();
+        this.needs = new ArrayList<>();
         this.activities = new ArrayList<>();
         this.skills = new ArrayList<>();
         this.commitments = new ArrayList<>();
@@ -30,7 +31,7 @@ public class Nonprofit {
         this.website = nonprofit.website;
         this.phone = nonprofit.phone;
         this.email = nonprofit.email;
-        this.need = nonprofit.need;
+        this.needs = nonprofit.needs;
         this.activities = nonprofit.activities;
         this.skills = nonprofit.skills;
         this.commitments = nonprofit.commitments;
@@ -69,16 +70,16 @@ public class Nonprofit {
         this.email = email;
     }
 
-    public ArrayList<Integer> getNeed() {
-        return need;
+    public ArrayList<Integer> getNeeds() {
+        return needs;
     }
 
-    public void setNeed(ArrayList<Integer> need) {
-        this.need = need;
+    public void setNeeds(ArrayList<Integer> need) {
+        this.needs = need;
     }
 
     public void addNeed(Integer need) {
-        this.need.add(need);
+        this.needs.add(need);
     }
 
     public ArrayList<Integer> getActivities() {
@@ -126,10 +127,14 @@ public class Nonprofit {
     }
 
     public String printNonprofit() {
-        return  "Name: " + this.name +
-                "Website: " + this.website +
-                "Phone: " + this.phone +
-                "Email: " + this.email +
+        return  "Name: " + this.name + "<br>" +
+                "Website: " + this.website + "<br>" +
+                "Phone: " + this.phone + "<br>" +
+                "Email: " + this.email + "<br>" +
+                "Needs: " + Arrays.toString(needs.toArray()) + "<br>" +
+                "Activities: " + Arrays.toString(activities.toArray()) + "<br>" +
+                "Skills: " + Arrays.toString(skills.toArray()) + "<br>" +
+                "Commitments: " + Arrays.toString(commitments.toArray()) + "<br>" +
                 "Location: " + this.location;
     }
 }
