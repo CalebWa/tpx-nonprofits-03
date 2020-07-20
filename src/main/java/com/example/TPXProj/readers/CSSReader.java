@@ -1,4 +1,4 @@
 package com.example.TPXProj.readers;
 
-public class NonprofitHTMLReader {
+public class CSSReader {
 }
