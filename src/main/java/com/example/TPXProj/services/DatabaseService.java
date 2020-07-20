@@ -3,7 +3,7 @@ package com.example.TPXProj.services;
 import com.example.TPXProj.models.DatabaseNonprofit;
 import com.example.TPXProj.models.Nonprofit;
 import com.example.TPXProj.parsers.NonprofitParser;
-import com.example.TPXProj.repositories.NonprofitsRepository;
+import com.example.TPXProj.repositories.DatabaseNonprofitRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -13,10 +13,10 @@ import java.util.ArrayList;
 @RestController
 public class DatabaseService {
     @Autowired
-    private NonprofitsRepository repository;
+    private DatabaseNonprofitRepository repository;
 
     @GetMapping("/api/nonprofits")
-    public Iterable<DatabaseNonprofit> findAllNonProfits() {
+    public Iterable<DatabaseNonprofit> apiFindAllNonProfits() {
         return repository.findAll();
     }
 
@@ -30,5 +30,9 @@ public class DatabaseService {
         }
 
         return output;
+    }
+
+    public Iterable<DatabaseNonprofit> findAllNonprofits() {
+        return repository.findAll();
     }
 }

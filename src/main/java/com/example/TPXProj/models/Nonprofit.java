@@ -13,6 +13,7 @@ public class Nonprofit {
     private ArrayList<Integer> skills;
     private ArrayList<Integer> commitments;
     private Integer location;
+    private Integer score;
 
     public Nonprofit() {
         this.name = null;
@@ -24,6 +25,7 @@ public class Nonprofit {
         this.skills = new ArrayList<>();
         this.commitments = new ArrayList<>();
         this.location = null;
+        this.score = null;
     }
 
     public Nonprofit(Nonprofit nonprofit) {
@@ -36,6 +38,7 @@ public class Nonprofit {
         this.skills = nonprofit.skills;
         this.commitments = nonprofit.commitments;
         this.location = nonprofit.location;
+        this.score = null;
     }
 
     public String getName() {
@@ -124,6 +127,14 @@ public class Nonprofit {
 
     public void setLocation(Integer location) {
         this.location = location;
+    }
+
+    public Integer getScore() {
+        return score;
+    }
+
+    public void setScore(Integer score) {
+        this.score = score;
     }
 
     public String printNonprofit() {
