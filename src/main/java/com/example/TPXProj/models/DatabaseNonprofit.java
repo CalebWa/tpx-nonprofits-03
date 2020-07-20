@@ -7,7 +7,7 @@ import javax.persistence.Id;
 
 
 @Entity
-public class Nonprofits {
+public class DatabaseNonprofit {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
@@ -18,9 +18,8 @@ public class Nonprofits {
     private int needs;
     private long activities;
     private long skills;
-    private int times;
+    private int commitments;
     private int location;
-    private String comment;
 
 
     public int getID() {
@@ -87,12 +86,12 @@ public class Nonprofits {
         this.skills = skills;
     }
 
-    public int getTimes() {
-        return times;
+    public int getCommitments() {
+        return commitments;
     }
 
-    public void setTimes(int times) {
-        this.times = times;
+    public void setCommitments(int commitments) {
+        this.commitments = commitments;
     }
 
     public int getLocation() {
@@ -101,13 +100,5 @@ public class Nonprofits {
 
     public void setLocation(int location) {
         this.location = location;
-    }
-
-    public String getComment() {
-        return comment;
-    }
-
-    public void setComment(String comment) {
-        this.comment = comment;
     }
 }

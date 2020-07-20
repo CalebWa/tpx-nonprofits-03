@@ -12,7 +12,30 @@ public class Nonprofit {
     private ArrayList<Integer> skills;
     private ArrayList<Integer> commitments;
     private Integer location;
-    private String comment;
+
+    public Nonprofit() {
+        this.name = null;
+        this.website = null;
+        this.phone = null;
+        this.email = null;
+        this.need = new ArrayList<>();
+        this.activities = new ArrayList<>();
+        this.skills = new ArrayList<>();
+        this.commitments = new ArrayList<>();
+        this.location = null;
+    }
+
+    public Nonprofit(Nonprofit nonprofit) {
+        this.name = nonprofit.name;
+        this.website = nonprofit.website;
+        this.phone = nonprofit.phone;
+        this.email = nonprofit.email;
+        this.need = nonprofit.need;
+        this.activities = nonprofit.activities;
+        this.skills = nonprofit.skills;
+        this.commitments = nonprofit.commitments;
+        this.location = nonprofit.location;
+    }
 
     public String getName() {
         return name;
@@ -102,11 +125,11 @@ public class Nonprofit {
         this.location = location;
     }
 
-    public String getComment() {
-        return comment;
-    }
-
-    public void setComment(String comment) {
-        this.comment = comment;
+    public String printNonprofit() {
+        return  "Name: " + this.name +
+                "Website: " + this.website +
+                "Phone: " + this.phone +
+                "Email: " + this.email +
+                "Location: " + this.location;
     }
 }
