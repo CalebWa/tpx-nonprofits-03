@@ -7,7 +7,7 @@ import com.example.TPXProj.readers.FileReader;
 import java.util.PriorityQueue;
 
 public class NonprofitInserter {
-    private static final String filePath = "src/main/webapp/volunteer-submit-test.html";
+    private static final String filePath = "src/main/webapp/volunteer-submit.html";
     private static final String namePlaceHolder = "[name?]";
     private static final String websitePlaceHolder = "[website?]";
     private static final String phonePlaceHolder = "[phone?]";
@@ -29,7 +29,7 @@ public class NonprofitInserter {
             if (nonprofitRanks.size() == 0) {
                 break;
             }
-            
+
             Nonprofit curNonprofit = nonprofitRanks.remove();
 
             fileString = insertNonprofit(fileString, curNonprofit, i);
