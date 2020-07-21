@@ -3,6 +3,7 @@ package com.example.TPXProj.parsers;
 import com.example.TPXProj.models.Nonprofit;
 import com.example.TPXProj.models.DatabaseNonprofit;
 
+import javax.xml.crypto.Data;
 import java.util.ArrayList;
 
 public class NonprofitParser {
@@ -98,5 +99,72 @@ public class NonprofitParser {
         }
 
         return nonprofitArrayList;
+    }
+
+    public static DatabaseNonprofit deparseNonprofit(Nonprofit nonprofit) {
+
+
+        DatabaseNonprofit databaseNonprofit = new DatabaseNonprofit();
+
+        databaseNonprofit.setName(nonprofit.getName());
+        databaseNonprofit.setWebsite(nonprofit.getWebsite());
+        databaseNonprofit.setPhone(nonprofit.getPhone());
+        databaseNonprofit.setEmail(nonprofit.getEmail());
+
+        int needs = 0;
+        for (Integer need : nonprofit.getNeeds()) {
+            int activeBit = 1;
+
+            for (int i = 0; i < need; i++) {
+                activeBit *= 10;
+            }
+
+            needs += activeBit;
+        }
+        databaseNonprofit.setActivities(needs);
+
+        int activities = 0;
+        for (Integer activity : nonprofit.getActivities()) {
+            int activeBit = 1;
+
+            for (int i = 0; i < activity; i++) {
+                activeBit *= 10;
+            }
+
+            activities += activeBit;
+        }
+        databaseNonprofit.setActivities(activities);
+
+        int skills = 0;
+        for (Integer skill : nonprofit.getSkills()) {
+            int activeBit = 1;
+
+            for (int i = 0; i < skill; i++) {
+                activeBit *= 10;
+            }
+
+            skills += activeBit;
+        }
+        databaseNonprofit.setActivities(skills);
+
+        int commitments = 0;
+        for (Integer commitment : nonprofit.getCommitments()) {
+            int activeBit = 1;
+
+            for (int i = 0; i < commitment; i++) {
+                activeBit *= 10;
+            }
+
+            commitment += activeBit;
+        }
+        databaseNonprofit.setActivities(commitments);
+
+        databaseNonprofit.setLocation(nonprofit.getLocation());
+
+        return databaseNonprofit;
+    }
+
+    private static boolean nonprofitSafe(Nonprofit nonprofit) {
+        //here
     }
 }
