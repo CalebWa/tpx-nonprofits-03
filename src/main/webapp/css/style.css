@@ -103,6 +103,7 @@ p {
     color: #EB973F;
     line-height: 1.5em;
     padding-top: 2em;
+    padding-bottom: 1em;
     font-weight: 400;
     font-size: 1.2em;
 }
@@ -111,14 +112,14 @@ p {
     color: #757575;
     line-height: 1.5em;
     padding-top: 2em;
-    padding-bottom: 5em;
+    padding-bottom: 3em;
 }
 
 .info2 {
     color: #757575;
     line-height: 1.5em;
     padding-top: 2em;
-    padding-bottom: 5em;
+    padding-bottom: 3em;
 }
 
 a {
