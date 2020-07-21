@@ -13,7 +13,7 @@ import java.util.ArrayList;
 @RestController
 public class DatabaseService {
     @Autowired
-    private DatabaseNonprofitRepository repository;
+    private static DatabaseNonprofitRepository repository;
 
     @GetMapping("/api/nonprofits")
     public Iterable<DatabaseNonprofit> apiFindAllNonProfits() {

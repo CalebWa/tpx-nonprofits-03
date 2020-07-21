@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class FormService {
-    @PostMapping("/volunteer-submit")
+    @PostMapping("/volunteer-submit.html")
     public String serviceVolunteer(@RequestBody String formString) {
         VolunteerProcessor vp = new VolunteerProcessor(formString);
         return vp.output();
