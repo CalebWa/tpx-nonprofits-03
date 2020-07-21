@@ -3,6 +3,7 @@ package com.example.TPXProj.services;
 import com.example.TPXProj.models.DatabaseNonprofit;
 import com.example.TPXProj.models.Nonprofit;
 import com.example.TPXProj.parsers.NonprofitParser;
+import com.example.TPXProj.processors.NonprofitProcessor;
 import com.example.TPXProj.processors.VolunteerProcessor;
 import com.example.TPXProj.readers.FileReader;
 import com.example.TPXProj.repositories.DatabaseNonprofitRepository;
@@ -45,6 +46,7 @@ public class DatabaseService {
 
     @PostMapping("/nonprofit-submit.html")
     public String serviceNonprofit(@RequestBody String formString) {
+        NonprofitProcessor np = new NonprofitProcessor(formString);
         return FileReader.readFile("src/main/webapp/nonprofit-submit.html");
     }
 }

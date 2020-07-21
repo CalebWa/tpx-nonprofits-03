@@ -4,11 +4,11 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 public class OutputMapper {
-    HashMap<Integer, String> needMap;
-    HashMap<Integer, String> activityMap;
-    HashMap<Integer, String> skillMap;
-    HashMap<Integer, String> commitmentMap;
-    HashMap<Integer, String> locationMap;
+    private HashMap<Integer, String> needMap;
+    private HashMap<Integer, String> activityMap;
+    private HashMap<Integer, String> skillMap;
+    private HashMap<Integer, String> commitmentMap;
+    private HashMap<Integer, String> locationMap;
 
     public OutputMapper() {
         needMap = new HashMap<>();
@@ -72,7 +72,7 @@ public class OutputMapper {
     public String mapNeeds(ArrayList<Integer> needs) {
         StringBuilder output = new StringBuilder();
         for (int i = 0; i < needs.size(); i++) {
-            output.append(needMap.get(i));
+            output.append(needMap.get(needs.get(i)));
 
             if (i < needs.size() - 1) {
                 output.append(", ");
@@ -89,7 +89,7 @@ public class OutputMapper {
     public String mapActivities(ArrayList<Integer> activities) {
         StringBuilder output = new StringBuilder();
         for (int i = 0; i < activities.size(); i++) {
-            output.append(activityMap.get(i));
+            output.append(activityMap.get(activities.get(i)));
 
             if (i < activities.size() - 1) {
                 output.append(", ");
@@ -106,7 +106,7 @@ public class OutputMapper {
     public String mapSkills(ArrayList<Integer> skills) {
         StringBuilder output = new StringBuilder();
         for (int i = 0; i < skills.size(); i++) {
-            output.append(skillMap.get(i));
+            output.append(skillMap.get(skills.get(i)));
 
             if (i < skills.size() - 1) {
                 output.append(", ");
@@ -123,7 +123,7 @@ public class OutputMapper {
     public String mapCommitments(ArrayList<Integer> commitments) {
         StringBuilder output = new StringBuilder();
         for (int i = 0; i < commitments.size(); i++) {
-            output.append(commitmentMap.get(i));
+            output.append(commitmentMap.get(commitments.get(i)));
 
             if (i < commitments.size() - 1) {
                 output.append(", ");
