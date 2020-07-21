@@ -86,20 +86,23 @@ h6 {
 }
 
 h7 {
-    width: 220px; 
-    height: 220px;
-    padding-bottom: 4.5em;
-    padding-top: 0.5em;
     font-size: 1.4em;
     color: #B87732;
-    text-align: left;;
-    line-height: 1.5em;
+    text-align: left;
 }
 
 p {
     font-size: 0.925em;
     font-weight: 300;
     color: #757575;
+}
+
+.match {
+    line-height: 2em;
+    margin-left: 0em;
+    margin-right: 0em;
+    width: 17em;
+    padding: 0em 0em 3.2em 0em;
 }
 
 .imgtext {
@@ -181,8 +184,6 @@ button:hover {
     color: white;
     font-weight: 350;
     font-size: 0.9em;
-    width: 220px; 
-    height: 220px;
     padding-bottom: 4.5em;
     padding-top: 0.5em;
 }
