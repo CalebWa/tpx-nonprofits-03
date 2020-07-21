@@ -86,12 +86,13 @@ h6 {
 }
 
 h7 {
-    font-size: 1.4em;
-    padding-bottom: 3em;
+    width: 220px; 
+    height: 220px;
+    padding-bottom: 4.5em;
     padding-top: 0.5em;
+    font-size: 1.4em;
     color: #B87732;
-    text-align: left;
-    max-width: 25em;
+    text-align: left;;
     line-height: 1.5em;
 }
 
@@ -179,8 +180,11 @@ button:hover {
     background-color: #B87732;
     color: white;
     font-weight: 350;
-    margin-left: 20em;
     font-size: 0.9em;
+    width: 220px; 
+    height: 220px;
+    padding-bottom: 4.5em;
+    padding-top: 0.5em;
 }
 
 footer {
