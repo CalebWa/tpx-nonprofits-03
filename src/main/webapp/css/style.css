@@ -104,6 +104,7 @@ p {
     line-height: 2em;
     padding-bottom: 3em;
     padding-top: 2em;
+    font-weight: 400;
 }
 
 .info {
@@ -185,7 +186,8 @@ button:hover {
     font-weight: 350;
     font-size: 0.9em;
     margin-top: 2em;
-    margin-bottom: 3em;
+    margin-bottom: 3.5em;
+    margin-left: 20em;
 }
 
 footer {
