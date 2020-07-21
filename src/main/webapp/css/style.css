@@ -85,6 +85,12 @@ h6 {
     line-height: 1.5em;
 }
 
+h7 { 
+    font-size: 1.35em;
+    color: #EB973F;
+    line-height: 1em;   
+}
+
 p {
     font-size: 0.925em;
     font-weight: 300;
