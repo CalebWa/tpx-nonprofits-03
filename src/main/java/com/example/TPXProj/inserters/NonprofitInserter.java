@@ -40,7 +40,7 @@ public class NonprofitInserter {
     private static String insertComponent(String fileString, String newValue, String placeHolder) {
         int index = fileString.indexOf(placeHolder);
         int length = placeHolder.length();
-        
+
         fileString = fileString.substring(0, index) + newValue + fileString.substring(index + length);
 
         return fileString;
