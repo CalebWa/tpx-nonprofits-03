@@ -22,10 +22,14 @@ public class NonprofitInserter {
 
 
     public static String run(PriorityQueue<Nonprofit> nonprofitRanks) {
-        String fileString = FileReader.readFile("src/main/webapp/volunteer-submit.html");
+        String fileString = FileReader.readFile(filePath);
         outputMapper = new OutputMapper();
 
-        for (int i = 0; i < 1; i++) {
+        for (int i = 0; i < 4; i++) {
+            if (nonprofitRanks.size() == 0) {
+                break;
+            }
+
             Nonprofit curNonprofit = nonprofitRanks.remove();
 
             fileString = insertNonprofit(fileString, curNonprofit, i);
@@ -56,7 +60,7 @@ public class NonprofitInserter {
         int index = fileString.indexOf(placeHolder);
         int length = placeHolder.length();
 
-        if (index >= 0) {
+        if (index >= 0 && newValue != null) {
             fileString = fileString.substring(0, index) + newValue + fileString.substring(index + length);
         }
 

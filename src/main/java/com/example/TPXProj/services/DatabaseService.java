@@ -43,9 +43,8 @@ public class DatabaseService {
         return vp.output(repository);
     }
 
-    @PostMapping("/nonprofit-confirmation")
+    @PostMapping("/nonprofit-submit.html")
     public String serviceNonprofit(@RequestBody String formString) {
-        System.out.println(formString);
-        return "This functionality is not yet working.";
+        return FileReader.readFile("src/main/webapp/nonprofit-submit.html");
     }
 }

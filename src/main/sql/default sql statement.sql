@@ -1,20 +1,20 @@
-INSERT INTO `heroku_83f5977bdc7f2d3`.`nonprofits`
+INSERT INTO `heroku_83f5977bdc7f2d3`.`database_nonprofit`
 (`name`,
 `website`,
 `phone`,
-`need`,
+`email`,
+`needs`,
 `activities`,
 `skills`,
-`time`,
-`location`,
-`comment`)
+`commitments`,
+`location`)
 VALUES
-('My Nonprofit',
-'nonprofit.com',
+('A Nonprofit',
+'anonprofit.com',
 '1234567890',
+'owner@nonprofit.com',
 '000',
 '00000000000000',
 '00000000000',
 '000000',
-'0',
-'We are a nonprofit');
+'0');
