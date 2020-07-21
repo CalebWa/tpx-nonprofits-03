@@ -1,6 +1,7 @@
 package com.example.TPXProj.processors;
 
 import com.example.TPXProj.inserters.NonprofitInserter;
+import com.example.TPXProj.models.DatabaseNonprofit;
 import com.example.TPXProj.models.Nonprofit;
 import com.example.TPXProj.models.Volunteer;
 import com.example.TPXProj.parsers.NonprofitParser;
@@ -10,6 +11,8 @@ import com.example.TPXProj.repositories.DatabaseNonprofitRepository;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.PriorityQueue;
+
+import static com.example.TPXProj.parsers.NonprofitParser.parseDatabase;
 
 public class VolunteerProcessor {
     private Volunteer volunteer;
