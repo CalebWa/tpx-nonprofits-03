@@ -87,7 +87,7 @@ h6 {
 
 p {
     font-size: 1em;
-    font-weight: 350; 
+    font-weight: 300; 
 }
 
 .imgtext {
@@ -116,12 +116,12 @@ p {
 }
 
 .info2 {
-    color: #EB973F;
+    color: #6B451D;
     line-height: 1.5em;
 }
 
 .info2:hover {
-    color: #EB973F;
+    color: #6B451D;
     text-decoration: underline;
 }
 
