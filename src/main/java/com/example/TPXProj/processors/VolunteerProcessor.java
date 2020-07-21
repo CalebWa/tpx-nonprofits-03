@@ -1,5 +1,6 @@
 package com.example.TPXProj.processors;
 
+import com.example.TPXProj.inserters.VolunteerInserter;
 import com.example.TPXProj.models.Nonprofit;
 import com.example.TPXProj.models.Volunteer;
 import com.example.TPXProj.parsers.NonprofitParser;
@@ -12,10 +13,8 @@ import java.util.PriorityQueue;
 
 public class VolunteerProcessor {
     private Volunteer volunteer;
-    private String formString;
 
     public VolunteerProcessor(String formString) {
-        this.formString = formString;
         this.volunteer = new Volunteer(VolunteerParser.parseString(formString));
     }
 
@@ -25,8 +24,8 @@ public class VolunteerProcessor {
         //Compare against the one volunteer
         //Create hashmap/rank data sheet
 
-        System.out.println(this.formString);
-        System.out.println(this.volunteer);
+        VolunteerInserter.insert
+
         return  "Your best nonprofit is: <br>" +
                 nonprofitRanks.remove().printNonprofit();
     }
