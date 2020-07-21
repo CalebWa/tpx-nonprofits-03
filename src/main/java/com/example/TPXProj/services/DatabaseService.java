@@ -3,9 +3,14 @@ package com.example.TPXProj.services;
 import com.example.TPXProj.models.DatabaseNonprofit;
 import com.example.TPXProj.models.Nonprofit;
 import com.example.TPXProj.parsers.NonprofitParser;
+import com.example.TPXProj.processors.VolunteerProcessor;
+import com.example.TPXProj.readers.FileReader;
 import com.example.TPXProj.repositories.DatabaseNonprofitRepository;
+import org.hibernate.service.spi.InjectService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.ArrayList;
@@ -13,7 +18,7 @@ import java.util.ArrayList;
 @RestController
 public class DatabaseService {
     @Autowired
-    private static DatabaseNonprofitRepository repository;
+    private DatabaseNonprofitRepository repository;
 
     @GetMapping("/api/nonprofits")
     public Iterable<DatabaseNonprofit> apiFindAllNonProfits() {
@@ -32,8 +37,16 @@ public class DatabaseService {
         return output;
     }
 
+    @PostMapping("/volunteer-submit.html")
+    public String serviceVolunteer(@RequestBody String formString) {
+        return FileReader.readFile("src\\main\\webapp\\volunteer-submit.html");
+//        VolunteerProcessor vp = new VolunteerProcessor(formString);
+//        return vp.output(repository);
+    }
 
-    public Iterable<DatabaseNonprofit> findAllNonprofits() {
-        return repository.findAll();
+    @PostMapping("/nonprofit-confirmation")
+    public String serviceNonprofit(@RequestBody String formString) {
+        System.out.println(formString);
+        return "This functionality is not yet working.";
     }
 }

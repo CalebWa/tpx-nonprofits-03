@@ -1,11 +1,10 @@
 package com.example.TPXProj.processors;
 
-import com.example.TPXProj.models.DatabaseNonprofit;
 import com.example.TPXProj.models.Nonprofit;
 import com.example.TPXProj.models.Volunteer;
 import com.example.TPXProj.parsers.NonprofitParser;
 import com.example.TPXProj.parsers.VolunteerParser;
-import com.example.TPXProj.services.DatabaseService;
+import com.example.TPXProj.repositories.DatabaseNonprofitRepository;
 
 import java.util.ArrayList;
 import java.util.Comparator;
@@ -15,17 +14,13 @@ public class VolunteerProcessor {
     private Volunteer volunteer;
     private String formString;
 
-    private static final Integer componentName = 0;
-    private static final Integer componentValue = 1;
-
     public VolunteerProcessor(String formString) {
         this.formString = formString;
         this.volunteer = new Volunteer(VolunteerParser.parseString(formString));
     }
 
-    public String output() {
-        DatabaseService dbs = new DatabaseService();
-        PriorityQueue<Nonprofit> nonprofitRanks = this.rankNonprofits(NonprofitParser.parseDatabase(dbs.findAllNonprofits()));
+    public String output(DatabaseNonprofitRepository repository) {
+        PriorityQueue<Nonprofit> nonprofitRanks = this.rankNonprofits(NonprofitParser.parseDatabase(repository.findAll()));
 
         //Compare against the one volunteer
         //Create hashmap/rank data sheet

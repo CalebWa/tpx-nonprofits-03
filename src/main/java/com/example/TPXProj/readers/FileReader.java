@@ -8,6 +8,7 @@ public class FileReader {
     public static String readFile(String filepath) {
         StringBuilder fileString = new StringBuilder();
         try {
+            System.out.println(filepath);
             File file = new File(filepath);
             Scanner scanner = new Scanner(file);
 
