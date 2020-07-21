@@ -85,6 +85,12 @@ h6 {
     line-height: 1.5em;
 }
 
+h7 { 
+    font-size: 1.35em;
+    color: #EB973F;
+    line-height: 1em;   
+}
+
 p {
     font-size: 0.925em;
     font-weight: 300;
@@ -96,8 +102,8 @@ p {
     margin-left: 0em;
     margin-right: 0em;
     width: 17em;
-    height: 5em;
-    padding: 2em 0em 3.2em 0em;
+    height: 10em;
+    padding: 0em 0em 3.2em 0em;
 }
 
 a {
@@ -164,13 +170,6 @@ button:hover {
     font-size: 1.1em;
     width: 40%;
     height: 3em;
-}
-
-.signup {
-    background-color: #B87732;
-    color: white;
-    font-weight: 350;
-    font-size: 0.9em;
 }
 
 footer {
