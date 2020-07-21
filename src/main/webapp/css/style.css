@@ -85,18 +85,9 @@ h6 {
     line-height: 1.5em;
 }
 
-h7 { 
-    font-size: 1.35em;
-    color: #EB973F;
-    line-height: 2em;
-    padding-bottom: 3em;
-    padding-top: 2em;
-}
-
 p {
-    font-size: 0.925em;
-    font-weight: 300;
-    color: #757575;
+    font-size: 1em;
+    font-weight: 300; 
 }
 
 .imgtext {
@@ -108,7 +99,15 @@ p {
     padding: 0em 0em 3.2em 0em;
 }
 
+.title {
+    color: #EB973F;
+    line-height: 2em;
+    padding-bottom: 3em;
+    padding-top: 2em;
+}
+
 .info {
+    color: #757575;
     line-height: 2em;
     padding-bottom 3em;
     padding-top: 2em;
@@ -185,6 +184,8 @@ button:hover {
     color: white;
     font-weight: 350;
     font-size: 0.9em;
+    margin-top: 2em;
+    margin-bottom: 3em;
 }
 
 footer {
