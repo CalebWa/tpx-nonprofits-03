@@ -1,6 +1,6 @@
 package com.example.TPXProj.processors;
 
-import com.example.TPXProj.inserters.VolunteerInserter;
+import com.example.TPXProj.inserters.NonprofitInserter;
 import com.example.TPXProj.models.Nonprofit;
 import com.example.TPXProj.models.Volunteer;
 import com.example.TPXProj.parsers.NonprofitParser;
@@ -24,7 +24,7 @@ public class VolunteerProcessor {
         //Compare against the one volunteer
         //Create hashmap/rank data sheet
 
-        VolunteerInserter.insert
+        String output = NonprofitInserter.run(nonprofitRanks);
 
         return  "Your best nonprofit is: <br>" +
                 nonprofitRanks.remove().printNonprofit();
