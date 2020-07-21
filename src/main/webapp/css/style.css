@@ -101,12 +101,11 @@ p {
 
 .title {
     color: #EB973F;
-    line-height: 2em;
+    line-height: 1.5em;
     padding-bottom: 3em;
     padding-top: 2em;
-    padding-left: 2em;
     font-weight: 400;
-    font-size: 1.4em;
+    font-size: 1.2em;
 }
 
 .info {
