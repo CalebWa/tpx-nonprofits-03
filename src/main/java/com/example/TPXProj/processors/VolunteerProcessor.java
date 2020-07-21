@@ -21,13 +21,7 @@ public class VolunteerProcessor {
     public String output(DatabaseNonprofitRepository repository) {
         PriorityQueue<Nonprofit> nonprofitRanks = this.rankNonprofits(NonprofitParser.parseDatabase(repository.findAll()));
 
-        //Compare against the one volunteer
-        //Create hashmap/rank data sheet
-
-        String output = NonprofitInserter.run(nonprofitRanks);
-
-        return  "Your best nonprofit is: <br>" +
-                nonprofitRanks.remove().printNonprofit();
+        return NonprofitInserter.run(nonprofitRanks);
     }
 
     private PriorityQueue<Nonprofit> rankNonprofits(ArrayList<Nonprofit> databaseNonprofits) {

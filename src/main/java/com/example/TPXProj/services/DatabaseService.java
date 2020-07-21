@@ -39,9 +39,8 @@ public class DatabaseService {
 
     @PostMapping("/volunteer-submit.html")
     public String serviceVolunteer(@RequestBody String formString) {
-        return FileReader.readFile("src/main/webapp/volunteer-submit.html");
-//        VolunteerProcessor vp = new VolunteerProcessor(formString);
-//        return vp.output(repository);
+        VolunteerProcessor vp = new VolunteerProcessor(formString);
+        return vp.output(repository);
     }
 
     @PostMapping("/nonprofit-confirmation")
