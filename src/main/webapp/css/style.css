@@ -61,6 +61,7 @@ h3 {
 
 h4 {
     font-size: 1.4em;
+    font-weight: 335;
     padding-bottom: 12em;
     padding-top: 0.5em;
     color: #e8e8e8;
@@ -77,7 +78,7 @@ h5 {
 
 h6 {
     font-size: 1.4em;
-    font-weight: 375;
+    font-weight: 335;
     padding-bottom: 3em;
     padding-top: 0.5em;
     color: #e8e8e8;
@@ -183,7 +184,7 @@ button:hover {
 .clickme3 {
     background-color: #B87732;
     color: white;
-    font-weight: 300;
+    font-weight: 335;
     margin-top: 1.5em;
     margin-bottom: 9em;
     margin-left: 30em;
