@@ -104,12 +104,14 @@ p {
     line-height: 2em;
     padding-bottom: 3em;
     padding-top: 2em;
+    padding-left: 2em;
     font-weight: 400;
+    font-size: 1.4em;
 }
 
 .info {
     color: #757575;
-    line-height: 2em;
+    line-height: 1.5em;
     padding-bottom 3em;
     padding-top: 2em;
 }
@@ -178,16 +180,6 @@ button:hover {
     font-size: 1.1em;
     width: 40%;
     height: 3em;
-}
-
-.signup {
-    background-color: #B87732;
-    color: white;
-    font-weight: 350;
-    font-size: 0.9em;
-    margin-top: 2em;
-    margin-bottom: 3.5em;
-    margin-left: 20em;
 }
 
 footer {
