@@ -193,17 +193,6 @@ button:hover {
     width: 40%;
     height: 3em;
 }
-.clickme4 {
-	background-color: #EB973F;
-    color: white;
-    font-weight: 350;
-    margin-top: 1em;
-    margin-left: 21em;
-    font-size: 1.3em;
-    width: 50%;
-    height: 3em;
-    position: left;
-}
 
 footer {
     background-color: #6B451D;
@@ -221,4 +210,10 @@ form {
     color: #757575;
     line-height: 1.2em; 
     padding: 3em 0em 1em 0em;
+}
+.donate {
+	border-radius: 10px;
+    text-transform: none;
+    border-style: none;
+    position: left;
 }
