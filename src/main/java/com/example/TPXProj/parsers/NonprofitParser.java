@@ -158,7 +158,7 @@ public class NonprofitParser {
 
         long activities = 0;
         for (Integer activity : nonprofit.getActivities()) {
-            int activeBit = 1;
+            long activeBit = 1;
 
             for (int i = 0; i < activity; i++) {
                 activeBit *= 10;
@@ -170,7 +170,7 @@ public class NonprofitParser {
 
         long skills = 0;
         for (Integer skill : nonprofit.getSkills()) {
-            int activeBit = 1;
+            long activeBit = 1;
 
             for (int i = 0; i < skill; i++) {
                 activeBit *= 10;
