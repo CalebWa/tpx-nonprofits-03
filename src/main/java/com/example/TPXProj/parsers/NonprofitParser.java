@@ -147,7 +147,9 @@ public class NonprofitParser {
     }
 
     private static String cleanString(String input) {
-        if (input =)
+        if (input == null) {
+            return null;
+        }
         input = input.replace('+', ' ');
 
         String operateString = input;
