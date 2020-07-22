@@ -18,6 +18,7 @@ public class NonprofitProcessor {
         DatabaseNonprofit databaseNonprofit = NonprofitParser.deparseNonprofit(nonprofit);
 
         if (databaseNonprofit.getName() == null) {
+            System.out.println("Failed nonprofit error checking, aborting repository save.");
             return;
         }
 
