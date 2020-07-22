@@ -176,7 +176,9 @@ button:hover {
     color: white;
     font-weight: 350;
     margin-top: 1em;
-    margin-left: 21em;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
     font-size: 1.3em;
     width: 50%;
     height: 3em;
@@ -188,7 +190,9 @@ button:hover {
     font-weight: 335;
     margin-top: 1.5em;
     margin-bottom: 9em;
-    margin-left: 30em;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
     font-size: 1.1em;
     width: 40%;
     height: 3em;
@@ -235,7 +239,7 @@ td {
 	font-size: 1em;
 	color: #545c6e;
     font-weight: 325;
-    padding: left;
+    padding-left: 3em;
     margin-left: auto;
     margin-right: auto; 
 }
