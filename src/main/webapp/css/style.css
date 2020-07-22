@@ -225,3 +225,8 @@ form {
     border-style: none;
     position: left;
 }
+td {
+	margin-top: 1.5em;
+    margin-bottom: 9em;
+    margin-left: 30em;
+}
