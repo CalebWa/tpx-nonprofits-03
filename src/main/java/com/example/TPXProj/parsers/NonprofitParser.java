@@ -123,13 +123,41 @@ public class NonprofitParser {
                 continue;
             }
 
-            curNonprofit.setName(curNonprofit.getName().replace('+', ' '));
-            curNonprofit.setEmail(curNonprofit.getEmail().replaceAll("%40", "@"));
+            curNonprofit.setName(cleanString(curNonprofit.getName()));
+            curNonprofit.setWebsite(cleanString(curNonprofit.getWebsite()));
+            curNonprofit.setPhone(cleanString(curNonprofit.getPhone()));
+            curNonprofit.setEmail(cleanString(curNonprofit.getEmail()));
 
             nonprofitArrayList.add(curNonprofit);
         }
 
         return nonprofitArrayList;
+    }
+
+    private static String cleanString(String input) {
+        input = input.replace('+', ' ');
+
+        String operateString = input;
+        StringBuilder output = new StringBuilder();
+        int index = 0;
+
+        while ((index = operateString.indexOf("%")) >= 0) {
+            try {
+                String hex = operateString.substring(index + 1, index + 3);
+                int character = Integer.parseInt(hex, 16);
+
+                output.append(operateString, 0,index);
+                output.append((char) character);
+                operateString = operateString.substring(index + 3);
+            } catch (NumberFormatException e) {
+                output.append(operateString, 0, index + 1);
+                operateString = operateString.substring(index + 1);
+            }
+        }
+
+        output.append(operateString);
+
+        return output.toString();
     }
 
     public static DatabaseNonprofit deparseNonprofit(Nonprofit nonprofit) {
@@ -158,7 +186,7 @@ public class NonprofitParser {
 
         long activities = 0;
         for (Integer activity : nonprofit.getActivities()) {
-            int activeBit = 1;
+            long activeBit = 1;
 
             for (int i = 0; i < activity; i++) {
                 activeBit *= 10;
@@ -170,7 +198,7 @@ public class NonprofitParser {
 
         long skills = 0;
         for (Integer skill : nonprofit.getSkills()) {
-            int activeBit = 1;
+            long activeBit = 1;
 
             for (int i = 0; i < skill; i++) {
                 activeBit *= 10;
