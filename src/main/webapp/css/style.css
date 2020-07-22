@@ -91,7 +91,8 @@ h6 {
 h7 {
     font-size: 1.4em;
     font-weight: 335;
-    padding-bottom: 15em;
+    padding-bottom: 3em;
+    height: 20em;
     padding-top: 0.5em;
     color: #e8e8e8;
     text-align: left;
