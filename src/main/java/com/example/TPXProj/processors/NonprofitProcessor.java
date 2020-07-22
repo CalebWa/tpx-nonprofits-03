@@ -14,15 +14,17 @@ public class NonprofitProcessor {
         this.nonprofit = new Nonprofit(NonprofitParser.parseString(formString));
     }
 
-    public void saveNonprofit(DatabaseNonprofitRepository repository) {
+    public boolean saveNonprofit(DatabaseNonprofitRepository repository) {
         DatabaseNonprofit databaseNonprofit = NonprofitParser.deparseNonprofit(nonprofit);
 
         if (databaseNonprofit.getName() == null) {
             System.out.println("Failed nonprofit error checking, aborting repository save.");
-            return;
+            return false;
         }
 
         repository.save(databaseNonprofit);
+
+        return true;
     }
 
     public String output() {

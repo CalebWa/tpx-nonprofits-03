@@ -15,10 +15,10 @@ public class DatabaseNonprofit {
     private String website;
     private String phone;
     private String email;
-    private int needs;
-    private long activities;
-    private long skills;
-    private int commitments;
+    private String needs;
+    private String activities;
+    private String skills;
+    private String commitments;
     private int location;
 
 
@@ -62,35 +62,35 @@ public class DatabaseNonprofit {
         this.email = email;
     }
 
-    public int getNeeds() {
+    public String getNeeds() {
         return needs;
     }
 
-    public void setNeeds(int needs) {
+    public void setNeeds(String needs) {
         this.needs = needs;
     }
 
-    public long getActivities() {
+    public String getActivities() {
         return activities;
     }
 
-    public void setActivities(int activities) {
+    public void setActivities(String activities) {
         this.activities = activities;
     }
 
-    public long getSkills() {
+    public String getSkills() {
         return skills;
     }
 
-    public void setSkills(int skills) {
+    public void setSkills(String skills) {
         this.skills = skills;
     }
 
-    public int getCommitments() {
+    public String getCommitments() {
         return commitments;
     }
 
-    public void setCommitments(int commitments) {
+    public void setCommitments(String commitments) {
         this.commitments = commitments;
     }
 

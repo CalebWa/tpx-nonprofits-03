@@ -60,7 +60,13 @@ public class NonprofitParser {
             curNonprofit.setPhone(nonprofit.getPhone());
             curNonprofit.setEmail(nonprofit.getEmail());
 
-            int needs = nonprofit.getNeeds();
+
+            if (nonprofit.getNeeds() == null) {
+                //Don't include bad nonprofit
+                continue;
+            }
+
+            int needs = Integer.parseInt(nonprofit.getNeeds());
             for (int i = 0; needs > 0; i++) {
                 if (needs % 10 != 0) {
                     curNonprofit.addNeed(i);
@@ -68,7 +74,13 @@ public class NonprofitParser {
                 needs /= 10;
             }
 
-            long activities = nonprofit.getActivities();
+
+            if (nonprofit.getActivities() == null) {
+                //Don't include bad nonprofit
+                continue;
+            }
+
+            long activities = Long.parseLong(nonprofit.getActivities());
             for (int i = 0; activities > 0; i++) {
                 if (activities % 10 != 0) {
                     curNonprofit.addActivity(i);
@@ -76,7 +88,13 @@ public class NonprofitParser {
                 activities /= 10;
             }
 
-            long skills = nonprofit.getSkills();
+
+            if (nonprofit.getSkills() == null) {
+                //Don't include bad nonprofit
+                continue;
+            }
+
+            long skills = Long.parseLong(nonprofit.getSkills());
             for (int i = 0; skills > 0; i++) {
                 if (skills % 10 != 0) {
                     curNonprofit.addSkill(i);
@@ -84,7 +102,13 @@ public class NonprofitParser {
                 skills /= 10;
             }
 
-            int commitments = nonprofit.getCommitments();
+
+            if (nonprofit.getCommitments() == null) {
+                //Don't include bad nonprofit
+                continue;
+            }
+
+            int commitments = Integer.parseInt(nonprofit.getCommitments());
             for (int i = 0; commitments > 0; i++) {
                 if (commitments % 10 != 0) {
                     curNonprofit.addCommitment(i);
@@ -93,6 +117,14 @@ public class NonprofitParser {
             }
 
             curNonprofit.setLocation(nonprofit.getLocation());
+
+            if (!errorChecknonprofit(curNonprofit)) {
+                //Don't include bad nonprofit
+                continue;
+            }
+
+            curNonprofit.setName(curNonprofit.getName().replace('+', ' '));
+            curNonprofit.setEmail(curNonprofit.getEmail().replaceAll("%40", "@"));
 
             nonprofitArrayList.add(curNonprofit);
         }
@@ -122,9 +154,9 @@ public class NonprofitParser {
 
             needs += activeBit;
         }
-        databaseNonprofit.setActivities(needs);
+        databaseNonprofit.setNeeds(Integer.toString(needs));
 
-        int activities = 0;
+        long activities = 0;
         for (Integer activity : nonprofit.getActivities()) {
             int activeBit = 1;
 
@@ -134,9 +166,9 @@ public class NonprofitParser {
 
             activities += activeBit;
         }
-        databaseNonprofit.setActivities(activities);
+        databaseNonprofit.setActivities(Long.toString(activities));
 
-        int skills = 0;
+        long skills = 0;
         for (Integer skill : nonprofit.getSkills()) {
             int activeBit = 1;
 
@@ -146,7 +178,7 @@ public class NonprofitParser {
 
             skills += activeBit;
         }
-        databaseNonprofit.setActivities(skills);
+        databaseNonprofit.setSkills(Long.toString(skills));
 
         int commitments = 0;
         for (Integer commitment : nonprofit.getCommitments()) {
@@ -158,7 +190,7 @@ public class NonprofitParser {
 
             commitments += activeBit;
         }
-        databaseNonprofit.setActivities(commitments);
+        databaseNonprofit.setCommitments(Integer.toString(commitments));
 
         databaseNonprofit.setLocation(nonprofit.getLocation());
 

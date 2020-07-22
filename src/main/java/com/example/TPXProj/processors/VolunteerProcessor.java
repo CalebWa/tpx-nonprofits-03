@@ -12,7 +12,7 @@ import java.util.Comparator;
 import java.util.PriorityQueue;
 
 public class VolunteerProcessor {
-    private static final String filePath = "src/main/webapp/volunteer-submit-test.html";
+    private static final String filePath = "src/main/webapp/volunteer-submit.html";
     private Volunteer volunteer;
     private PriorityQueue<Nonprofit> rankedNonprofits;
 

@@ -48,7 +48,9 @@ public class DatabaseService {
     @PostMapping("/nonprofit-submit.html")
     public String serviceNonprofit(@RequestBody String formString) {
         NonprofitProcessor np = new NonprofitProcessor(formString);
-        np.saveNonprofit(repository);
-        return np.output();
+        if (np.saveNonprofit(repository)) {
+            return np.output();
+        }
+        return "Could not submit nonprofit to database.";
     }
 }

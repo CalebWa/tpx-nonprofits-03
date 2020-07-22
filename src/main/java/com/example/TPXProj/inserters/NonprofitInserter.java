@@ -39,7 +39,13 @@ public class NonprofitInserter {
 
     private static String insertNonprofit(String fileString, Nonprofit nonprofit, int iteration) {
         String namePlaceHolder = NonprofitInserter.namePlaceHolder.replace('?', (char) (iteration + '1'));
+        String websitePlaceHolder = NonprofitInserter.websitePlaceHolder.replace('?', (char) (iteration + '1'));
+        String phonePlaceHolder = NonprofitInserter.phonePlaceHolder.replace('?', (char) (iteration + '1'));
+        String emailPlaceHolder = NonprofitInserter.emailPlaceHolder.replace('?', (char) (iteration + '1'));
+        String needsPlaceHolder = NonprofitInserter.needsPlaceHolder.replace('?', (char) (iteration + '1'));
         String activitiesPlaceHolder = NonprofitInserter.activitiesPlaceHolder.replace('?', (char) (iteration + '1'));
+        String skillsPlaceHolder = NonprofitInserter.skillsPlaceHolder.replace('?', (char) (iteration + '1'));
+        String commitmentsPlaceHolder = NonprofitInserter.commitmentsPlaceHolder.replace('?', (char) (iteration + '1'));
         String locationPlaceHolder = NonprofitInserter.locationPlaceHolder.replace('?', (char) (iteration + '1'));
 
         fileString = insertComponent(fileString, nonprofit.getName(), namePlaceHolder);

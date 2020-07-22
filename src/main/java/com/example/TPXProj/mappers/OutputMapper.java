@@ -55,14 +55,14 @@ public class OutputMapper {
 
         locationMap = new HashMap<>();
         locationMap.put(0, "Central");
-        locationMap.put(1, "North");
-        locationMap.put(2, "South");
-        locationMap.put(3, "East");
-        locationMap.put(4, "West");
-        locationMap.put(5, "Northeast");
-        locationMap.put(6, "Northwest");
-        locationMap.put(7, "Southeast");
-        locationMap.put(8, "Southwest");
+        locationMap.put(1, "Northern");
+        locationMap.put(2, "Southern");
+        locationMap.put(3, "Eastern");
+        locationMap.put(4, "Western");
+        locationMap.put(5, "Northeastern");
+        locationMap.put(6, "Northwestern");
+        locationMap.put(7, "Southeastern");
+        locationMap.put(8, "Southwestern");
     }
 
     public String mapNeed(Integer need) {
