@@ -3,7 +3,6 @@ package com.example.TPXProj.parsers;
 import com.example.TPXProj.models.Nonprofit;
 import com.example.TPXProj.models.DatabaseNonprofit;
 
-import javax.xml.crypto.Data;
 import java.util.ArrayList;
 
 public class NonprofitParser {
@@ -102,7 +101,9 @@ public class NonprofitParser {
     }
 
     public static DatabaseNonprofit deparseNonprofit(Nonprofit nonprofit) {
-
+        if (!errorChecknonprofit(nonprofit)) {
+            return new DatabaseNonprofit();
+        }
 
         DatabaseNonprofit databaseNonprofit = new DatabaseNonprofit();
 
@@ -155,7 +156,7 @@ public class NonprofitParser {
                 activeBit *= 10;
             }
 
-            commitment += activeBit;
+            commitments += activeBit;
         }
         databaseNonprofit.setActivities(commitments);
 
@@ -164,7 +165,43 @@ public class NonprofitParser {
         return databaseNonprofit;
     }
 
-    private static boolean nonprofitSafe(Nonprofit nonprofit) {
-        //here
+    private static boolean errorChecknonprofit(Nonprofit nonprofit) {
+        if (nonprofit.getName() == null || nonprofit.getName().equals("")) {
+            return false;
+        }
+
+        if (nonprofit.getWebsite() == null || nonprofit.getWebsite().equals("")) {
+            return false;
+        }
+
+        if (nonprofit.getPhone() == null || nonprofit.getPhone().equals("")) {
+            return false;
+        }
+
+        if (nonprofit.getEmail() == null || nonprofit.getEmail().equals("")) {
+            return false;
+        }
+
+        if (nonprofit.getNeeds().size() == 0) {
+            return false;
+        }
+
+        if (nonprofit.getActivities().size() == 0) {
+            return false;
+        }
+
+        if (nonprofit.getSkills().size() == 0) {
+            return false;
+        }
+
+        if (nonprofit.getCommitments().size() == 0) {
+            return false;
+        }
+
+        if (nonprofit.getLocation() < 0 || nonprofit.getLocation() > 8) {
+            return false;
+        }
+
+        return true;
     }
 }

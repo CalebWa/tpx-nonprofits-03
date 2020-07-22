@@ -7,7 +7,6 @@ import com.example.TPXProj.readers.FileReader;
 import java.util.PriorityQueue;
 
 public class NonprofitInserter {
-    private static final String filePath = "src/main/webapp/volunteer-submit.html";
     private static final String namePlaceHolder = "[name?]";
     private static final String websitePlaceHolder = "[website?]";
     private static final String phonePlaceHolder = "[phone?]";
@@ -21,7 +20,7 @@ public class NonprofitInserter {
     private static OutputMapper outputMapper;
 
 
-    public static String run(PriorityQueue<Nonprofit> nonprofitRanks) {
+    public static String run(PriorityQueue<Nonprofit> nonprofitRanks, String filePath) {
         String fileString = FileReader.readFile(filePath);
         outputMapper = new OutputMapper();
 
@@ -57,10 +56,10 @@ public class NonprofitInserter {
     }
 
     private static String insertComponent(String fileString, String newValue, String placeHolder) {
-        int index = fileString.indexOf(placeHolder);
         int length = placeHolder.length();
 
-        if (index >= 0 && newValue != null) {
+        int index;
+        while ((index = fileString.indexOf(placeHolder)) != -1) {
             fileString = fileString.substring(0, index) + newValue + fileString.substring(index + length);
         }
 

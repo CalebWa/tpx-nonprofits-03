@@ -41,12 +41,14 @@ public class DatabaseService {
     @PostMapping("/volunteer-submit.html")
     public String serviceVolunteer(@RequestBody String formString) {
         VolunteerProcessor vp = new VolunteerProcessor(formString);
-        return vp.output(repository);
+        vp.rankNonprofits(repository);
+        return vp.output();
     }
 
     @PostMapping("/nonprofit-submit.html")
     public String serviceNonprofit(@RequestBody String formString) {
         NonprofitProcessor np = new NonprofitProcessor(formString);
-        return FileReader.readFile("src/main/webapp/nonprofit-submit.html");
+        np.saveNonprofit(repository);
+        return np.output();
     }
 }

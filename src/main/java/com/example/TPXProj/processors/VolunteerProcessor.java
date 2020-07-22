@@ -12,25 +12,27 @@ import java.util.Comparator;
 import java.util.PriorityQueue;
 
 public class VolunteerProcessor {
+    private static final String filePath = "src/main/webapp/volunteer-submit-test.html";
     private Volunteer volunteer;
+    private PriorityQueue<Nonprofit> rankedNonprofits;
 
     public VolunteerProcessor(String formString) {
         this.volunteer = new Volunteer(VolunteerParser.parseString(formString));
     }
 
-    public String output(DatabaseNonprofitRepository repository) {
-        PriorityQueue<Nonprofit> nonprofitRanks = this.rankNonprofits(NonprofitParser.parseDatabase(repository.findAll()));
-
-        return NonprofitInserter.run(nonprofitRanks);
+    public String output() {
+        return NonprofitInserter.run(rankedNonprofits, filePath);
     }
 
-    private PriorityQueue<Nonprofit> rankNonprofits(ArrayList<Nonprofit> databaseNonprofits) {
-        PriorityQueue<Nonprofit> nonprofitRanks = new PriorityQueue<>(new Comparator<Nonprofit>() {
+    public void rankNonprofits(DatabaseNonprofitRepository repository) {
+        PriorityQueue<Nonprofit> rankedNonprofits = new PriorityQueue<>(new Comparator<Nonprofit>() {
             @Override
             public int compare(Nonprofit o1, Nonprofit o2) {
                 return - Integer.compare(o1.getScore(), o2.getScore());
             }
         });
+
+        ArrayList<Nonprofit> databaseNonprofits = NonprofitParser.parseDatabase((repository.findAll()));
 
         for (Nonprofit curNonprofit : databaseNonprofits) {
             int curScore = 0;
@@ -69,9 +71,9 @@ public class VolunteerProcessor {
 
             curNonprofit.setScore(curScore);
 
-            nonprofitRanks.add(curNonprofit);
+            rankedNonprofits.add(curNonprofit);
         }
 
-        return nonprofitRanks;
+        this.rankedNonprofits = rankedNonprofits;
     }
 }
