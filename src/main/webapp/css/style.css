@@ -228,5 +228,6 @@ form {
 td {
 	margin-top: 10px;
     margin-bottom: 10px;
-    padding: 30px;
+    margin-left: 20px;
+    padding: 50px;
 }
