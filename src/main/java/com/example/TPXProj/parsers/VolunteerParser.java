@@ -16,7 +16,7 @@ public class VolunteerParser {
                     volunteer.setContribution(Integer.parseInt(components[componentValue]));
                     break;
                 case "activity":
-                    volunteer.addActiity(Integer.parseInt(components[componentValue]));
+                    volunteer.addActivity(Integer.parseInt(components[componentValue]));
                     break;
                 case "skill":
                     volunteer.addSkill(Integer.parseInt(components[componentValue]));

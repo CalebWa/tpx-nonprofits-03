@@ -61,6 +61,7 @@ h3 {
 
 h4 {
     font-size: 1.4em;
+    font-weight: 335;
     padding-bottom: 12em;
     padding-top: 0.5em;
     color: #e8e8e8;
@@ -73,10 +74,12 @@ h5 {
     font-size: 1.2em;
     text-align: right; 
     font-style: italic;
+    font-weight: 350;
 }
 
 h6 {
     font-size: 1.4em;
+    font-weight: 335;
     padding-bottom: 3em;
     padding-top: 0.5em;
     color: #e8e8e8;
@@ -86,9 +89,8 @@ h6 {
 }
 
 p {
-    font-size: 0.925em;
-    font-weight: 300;
-    color: #757575;
+    font-size: 1em;
+    font-weight: 325; 
 }
 
 .imgtext {
@@ -96,7 +98,34 @@ p {
     margin-left: 0em;
     margin-right: 0em;
     width: 17em;
+    height: 8.85em;
     padding: 0em 0em 3.2em 0em;
+}
+
+.title {
+    color: #EB973F;
+    line-height: 1.5em;
+    padding-top: 2em;
+    padding-bottom: 1em;
+    font-weight: 400;
+    font-size: 1.2em;
+}
+
+.info {
+    color: #757575;
+    line-height: 1.5em;
+    padding-top: 2em;
+    padding-bottom: 1.2em;
+}
+
+.info2 {
+    color: #6B451D;
+    line-height: 1.5em;
+}
+
+.info2:hover {
+    color: #6B451D;
+    text-decoration: underline;
 }
 
 a {
@@ -156,7 +185,7 @@ button:hover {
 .clickme3 {
     background-color: #B87732;
     color: white;
-    font-weight: 300;
+    font-weight: 335;
     margin-top: 1.5em;
     margin-bottom: 9em;
     margin-left: 30em;

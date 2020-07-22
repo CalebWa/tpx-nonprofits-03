@@ -7,7 +7,7 @@ import javax.persistence.Id;
 
 
 @Entity
-public class Nonprofits {
+public class DatabaseNonprofit {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
@@ -15,12 +15,11 @@ public class Nonprofits {
     private String website;
     private String phone;
     private String email;
-    private int needs;
-    private long activities;
-    private long skills;
-    private int times;
+    private String needs;
+    private String activities;
+    private String skills;
+    private String commitments;
     private int location;
-    private String comment;
 
 
     public int getID() {
@@ -63,36 +62,36 @@ public class Nonprofits {
         this.email = email;
     }
 
-    public int getNeeds() {
+    public String getNeeds() {
         return needs;
     }
 
-    public void setNeeds(int needs) {
+    public void setNeeds(String needs) {
         this.needs = needs;
     }
 
-    public long getActivities() {
+    public String getActivities() {
         return activities;
     }
 
-    public void setActivities(int activities) {
+    public void setActivities(String activities) {
         this.activities = activities;
     }
 
-    public long getSkills() {
+    public String getSkills() {
         return skills;
     }
 
-    public void setSkills(int skills) {
+    public void setSkills(String skills) {
         this.skills = skills;
     }
 
-    public int getTimes() {
-        return times;
+    public String getCommitments() {
+        return commitments;
     }
 
-    public void setTimes(int times) {
-        this.times = times;
+    public void setCommitments(String commitments) {
+        this.commitments = commitments;
     }
 
     public int getLocation() {
@@ -101,13 +100,5 @@ public class Nonprofits {
 
     public void setLocation(int location) {
         this.location = location;
-    }
-
-    public String getComment() {
-        return comment;
-    }
-
-    public void setComment(String comment) {
-        this.comment = comment;
     }
 }
