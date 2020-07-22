@@ -231,3 +231,7 @@ td {
     margin-left: 20px;
     padding: 50px;
 }
+table {
+	font-size: 1em;
+    font-weight: 325;
+}
