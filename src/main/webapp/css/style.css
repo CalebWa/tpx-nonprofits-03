@@ -217,8 +217,22 @@ form {
     padding: 3em 0em 1em 0em;
 }
 .clickme4 {
+	background-color: #B87732;
+    color: white;
+    font-weight: 335;
 	border-radius: 10px;
     text-transform: none;
     border-style: none;
     position: left;
+}
+td {
+	margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    padding: 50px;
+}
+.table {
+	font-size: 1em;
+    font-weight: 325;
+    padding: left;
 }

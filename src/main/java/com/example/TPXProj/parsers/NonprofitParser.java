@@ -19,13 +19,25 @@ public class NonprofitParser {
                     nonprofit.setName(components[componentValue]);
                     break;
                 case "website":
-                    nonprofit.setWebsite(components[componentValue]);
+                    if (components.length < 2) {
+                        nonprofit.setWebsite(null);
+                    } else {
+                        nonprofit.setWebsite(components[componentValue]);
+                    }
                     break;
                 case "phone":
-                    nonprofit.setPhone(components[componentValue]);
+                    if (components.length < 2) {
+                        nonprofit.setPhone(null);
+                    } else {
+                        nonprofit.setPhone(components[componentValue]);
+                    }
                     break;
                 case "email":
-                    nonprofit.setEmail(components[componentValue]);
+                    if (components.length < 2) {
+                        nonprofit.setEmail(null);
+                    } else {
+                        nonprofit.setEmail(components[componentValue]);
+                    }
                     break;
                 case "need":
                     nonprofit.addNeed(Integer.parseInt(components[componentValue]));
@@ -118,7 +130,7 @@ public class NonprofitParser {
 
             curNonprofit.setLocation(nonprofit.getLocation());
 
-            if (!errorChecknonprofit(curNonprofit)) {
+            if (!errorCheckNonprofit(curNonprofit)) {
                 //Don't include bad nonprofit
                 continue;
             }
@@ -135,6 +147,9 @@ public class NonprofitParser {
     }
 
     private static String cleanString(String input) {
+        if (input == null) {
+            return null;
+        }
         input = input.replace('+', ' ');
 
         String operateString = input;
@@ -161,7 +176,7 @@ public class NonprofitParser {
     }
 
     public static DatabaseNonprofit deparseNonprofit(Nonprofit nonprofit) {
-        if (!errorChecknonprofit(nonprofit)) {
+        if (!errorCheckNonprofit(nonprofit)) {
             return new DatabaseNonprofit();
         }
 
@@ -225,20 +240,16 @@ public class NonprofitParser {
         return databaseNonprofit;
     }
 
-    private static boolean errorChecknonprofit(Nonprofit nonprofit) {
+    private static boolean errorCheckNonprofit(Nonprofit nonprofit) {
         if (nonprofit.getName() == null || nonprofit.getName().equals("")) {
             return false;
         }
 
-        if (nonprofit.getWebsite() == null || nonprofit.getWebsite().equals("")) {
-            return false;
-        }
-
-        if (nonprofit.getPhone() == null || nonprofit.getPhone().equals("")) {
-            return false;
-        }
-
-        if (nonprofit.getEmail() == null || nonprofit.getEmail().equals("")) {
+        //Nonprofit must give some form of contact info
+        //Returns false if there is no website, phone, and email
+        if ((nonprofit.getWebsite() == null || nonprofit.getWebsite().equals("")) &&
+                (nonprofit.getPhone() == null || nonprofit.getPhone().equals("")) &&
+                (nonprofit.getEmail() == null || nonprofit.getEmail().equals(""))) {
             return false;
         }
 
