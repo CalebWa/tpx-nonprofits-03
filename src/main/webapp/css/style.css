@@ -234,7 +234,7 @@ td {
 .table {
 	font-size: 1em;
     font-weight: 325;
-    padding: left;
+    padding-left: 3em;
     margin-left: auto;
     margin-right: auto; 
 }
