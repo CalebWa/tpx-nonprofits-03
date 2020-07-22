@@ -225,8 +225,10 @@ form {
     border-style: none;
     position: left;
 }
-table {
+td {
+	background-color: #B87732;
+    color: white;
 	margin-top: 1.5em;
     margin-bottom: 9em;
-    margin-left: 30em;
+    padding: 15px;
 }
