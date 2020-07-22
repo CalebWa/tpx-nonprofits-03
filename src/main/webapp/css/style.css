@@ -88,6 +88,17 @@ h6 {
     line-height: 1.5em;
 }
 
+h7 {
+    font-size: 1.4em;
+    font-weight: 335;
+    padding-bottom: 15em;
+    padding-top: 0.5em;
+    color: #e8e8e8;
+    text-align: left;
+    max-width: 25em;
+    line-height: 1.5em;
+}
+
 p {
     font-size: 1em;
     font-weight: 325; 
