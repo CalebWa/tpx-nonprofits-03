@@ -199,6 +199,12 @@ button:hover {
     background-color: #EB973F;
 }
 
+table {
+    padding-left: 3em;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 footer {
     background-color: #6B451D;
     color: #d1d1d1;
@@ -216,6 +222,7 @@ form {
     line-height: 1.2em; 
     padding: 3em 0em 1em 0em;
 }
+
 .clickme4 {
 	background-color: #B87732;
     color: white;
@@ -225,6 +232,7 @@ form {
     border-style: none;
     position: left;
 }
+
 td {
 	margin-top: 10px;
     margin-bottom: 10px;
