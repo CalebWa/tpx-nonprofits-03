@@ -5,6 +5,7 @@ import com.example.TPXProj.models.Nonprofit;
 import com.example.TPXProj.models.Volunteer;
 import com.example.TPXProj.parsers.NonprofitParser;
 import com.example.TPXProj.parsers.VolunteerParser;
+import com.example.TPXProj.readers.FileReader;
 import com.example.TPXProj.repositories.DatabaseNonprofitRepository;
 
 import java.util.ArrayList;
@@ -13,8 +14,15 @@ import java.util.PriorityQueue;
 
 public class VolunteerProcessor {
     private static final String filePath = "src/main/webapp/volunteer-submit.html";
+    private static final String errorFilePath = "src/main/webapp/volunteer-submit-error.html";
+    private static final String failureFilePath = "src/main/webapp/volunteer-submit-failure.html";
+
     private Volunteer volunteer;
     private PriorityQueue<Nonprofit> rankedNonprofits;
+
+    public VolunteerProcessor() {
+        this.volunteer = null;
+    }
 
     public VolunteerProcessor(String formString) {
         this.volunteer = new Volunteer(VolunteerParser.parseString(formString));
@@ -75,5 +83,13 @@ public class VolunteerProcessor {
         }
 
         this.rankedNonprofits = rankedNonprofits;
+    }
+
+    public String error() {
+        return FileReader.readFile(errorFilePath);
+    }
+
+    public String failure() {
+        return FileReader.readFile(failureFilePath);
     }
 }

@@ -150,6 +150,7 @@ public class NonprofitParser {
         if (input == null) {
             return null;
         }
+
         input = input.replace('+', ' ');
 
         String operateString = input;
@@ -245,11 +246,15 @@ public class NonprofitParser {
             return false;
         }
 
-        //Nonprofit must give some form of contact info
-        //Returns false if there is no website, phone, and email
-        if ((nonprofit.getWebsite() == null || nonprofit.getWebsite().equals("")) &&
-                (nonprofit.getPhone() == null || nonprofit.getPhone().equals("")) &&
-                (nonprofit.getEmail() == null || nonprofit.getEmail().equals(""))) {
+        if (nonprofit.getWebsite() == null || nonprofit.getWebsite().equals("")) {
+            return false;
+        }
+
+        if (nonprofit.getPhone() == null || nonprofit.getPhone().equals("")) {
+            return false;
+        }
+
+        if (nonprofit.getEmail() == null || nonprofit.getEmail().equals("")) {
             return false;
         }
 

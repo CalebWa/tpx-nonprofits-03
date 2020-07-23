@@ -8,7 +8,13 @@ import com.example.TPXProj.repositories.DatabaseNonprofitRepository;
 
 public class NonprofitProcessor {
     private static final String filePath = "src/main/webapp/nonprofit-submit.html";
+    private static final String errorFilePath = "src/main/webapp/nonprofit-submit-error.html";
+    private static final String failureFilePath = "src/main/webapp/nonprofit-submit-failure.html";
     private Nonprofit nonprofit;
+
+    public NonprofitProcessor() {
+        this.nonprofit = null;
+    }
 
     public NonprofitProcessor(String formString) {
         this.nonprofit = new Nonprofit(NonprofitParser.parseString(formString));
@@ -29,5 +35,13 @@ public class NonprofitProcessor {
 
     public String output() {
         return FileReader.readFile(filePath);
+    }
+
+    public String error() {
+        return FileReader.readFile(errorFilePath);
+    }
+
+    public String failure() {
+        return FileReader.readFile(failureFilePath);
     }
 }
