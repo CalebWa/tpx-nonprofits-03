@@ -24,9 +24,7 @@ public class DatabaseService {
     // *************************************************************************
     // Fields
     // *************************************************************************
-    /**
-     * Reference to the database object that communicates with the ClearDB MySQL Database
-     */
+    /** Reference to the database object that communicates with the ClearDB MySQL Database. */
     @Autowired
     private DatabaseNonprofitRepository repository;
 
@@ -41,10 +39,9 @@ public class DatabaseService {
      * @return All nonprofits in the database in JSON format
      */
     @GetMapping("/api/nonprofits")
-    public Iterable<DatabaseNonprofit> apiFindAllNonProfits() {
+    public Iterable<DatabaseNonprofit> findAllNonProfits() {
         return repository.findAll();
-    }
-
+    } // public Iterable<DatabaseNonprofit> findAllNonProfits()
 
     /**
      * Maps the address /api/nonprofits/formatted to a plain text page consisting of all info bits (separated by break) of all nonprofits
@@ -54,19 +51,18 @@ public class DatabaseService {
      */
     @GetMapping("/api/nonprofits/formatted")
     public String printNonprofits() {
-        //Retrieve, parse, and store all nonprofits in an arraylist
+        // Retrieve, parse, and store all nonprofits in an arraylist
         ArrayList<Nonprofit> nonprofitArrayList = NonprofitParser.parseDatabase(repository.findAll());
 
-        //Iterate through arraylist and format/append each one to String output
-        String output = "";
+        // Iterate through arraylist and format/append each one to String output
+        StringBuilder output = new StringBuilder();
         for (Nonprofit nonprofit : nonprofitArrayList) {
-            output += nonprofit.printNonprofit();
-            output += "<br><br>";
-        }
+            output.append(nonprofit.printNonprofit());
+            output.append("<br><br>");
+        } // for
 
-        return output;
-    }
-
+        return output.toString();
+    } // public String printNonprofits()
 
     /**
      * Takes the post request from the formString and uses VolunteerProcessor to return an html file of the
@@ -77,24 +73,11 @@ public class DatabaseService {
      */
     @PostMapping("/volunteer-submit.html")
     public String serviceVolunteer(@RequestBody String formString) {
+        // Call VolunteerProcessor methods to handle request
         VolunteerProcessor vp = new VolunteerProcessor(formString);
         vp.rankNonprofits(repository);
         return vp.output();
-    }
-
-
-    /**
-     * Fallback if someone accidentally tries a get request on the volunteer submit page
-     * (They reloaded the page or didn't fill in any fields)
-     *
-     * @return Html file stating they did not fill in any fields
-     */
-    @GetMapping("/nonprofit-submit.html")
-    public String serviceGetVolunteer() {
-        VolunteerProcessor vp = new VolunteerProcessor();
-        return vp.failure();
-    }
-
+    } // public String serviceVolunteer()
 
     /**
      * Takes the post request from the formString and uses NonprofitProcessor to save the nonprofit to the database.
@@ -106,23 +89,13 @@ public class DatabaseService {
      */
     @PostMapping("/nonprofit-submit.html")
     public String serviceNonprofit(@RequestBody String formString) {
+        // Call NonprofitProcessor methods to handle request
         NonprofitProcessor np = new NonprofitProcessor(formString);
         if (np.saveNonprofit(repository)) {
             return np.output();
         }
+
+        // If invalid nonprofit is submitted, serve error html file
         return np.error();
-    }
-
-
-    /**
-     * Fallback if someone accidentally tries a get request on the nonprofit submit page
-     * (They reloaded the page or didn't fill in any fields)
-     *
-     * @return Html file stating they did not fill in any fields
-     */
-    @GetMapping("/nonprofit-submit.html")
-    public String serviceGetNonprofit() {
-        NonprofitProcessor np = new NonprofitProcessor();
-        return np.failure();
-    }
-}
+    } // public String serviceNonprofit()
+} // public class DatabaseService

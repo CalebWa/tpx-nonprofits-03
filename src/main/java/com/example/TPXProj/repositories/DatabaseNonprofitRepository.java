@@ -10,4 +10,4 @@ import com.example.TPXProj.models.DatabaseNonprofit;
  */
 public interface DatabaseNonprofitRepository
     extends CrudRepository<DatabaseNonprofit, Integer> {
-}
+} // DatabaseNonprofitRepository
