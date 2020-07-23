@@ -93,6 +93,12 @@ Now you changes are online and live!
 
 
 
+Lastly, if you'd like to see what is in the database and alter the database, you will need to download
+the MySQL Workbench from the internet.
+
+
+
+
 
 
 --------------------------------------------------------------------------------------------------------------
