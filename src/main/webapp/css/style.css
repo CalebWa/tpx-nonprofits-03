@@ -199,6 +199,30 @@ button:hover {
     background-color: #EB973F;
 }
 
+table {
+    padding-left: 3em;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+}
+
+.table {
+	font-size: 1em;
+	color: #545c6e;
+    font-weight: 325;
+    padding-left: 3em;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%
+}
+
+td {
+	margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    padding: 50px;
+}
+
 footer {
     background-color: #6B451D;
     color: #d1d1d1;
@@ -216,6 +240,7 @@ form {
     line-height: 1.2em; 
     padding: 3em 0em 1em 0em;
 }
+
 .clickme4 {
 	background-color: #B87732;
     color: white;
@@ -225,6 +250,7 @@ form {
     border-style: none;
     position: left;
 }
+
 td {
 	margin-top: 10px;
     margin-bottom: 10px;
@@ -237,5 +263,6 @@ td {
     font-weight: 325;
     padding-left: 3em;
     margin-left: auto;
-    margin-right: auto; 
+    margin-right: auto;
+    border: none;
 }
